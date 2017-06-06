@@ -1,0 +1,15 @@
+﻿     This project is for testing with fxcop engine the WCF Semantic rules
+     
+	 Debugging custom rules
+     In the project properties for "FxCop.Rules.WcfSemantic" project on the Debug tab do the following:
+      1. Configure the project to launch an external program and enter in the path to FxCopCmd.exe. For example 
+          C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\FxCop\FxCopCmd.exe
+
+      2. For command line arguments specify 
+          /out:"results.xml" /file:"Microsoft.Practices.FxCop.Rules.WcfSemantic.Debug.dll" /rule:"Microsoft.Practices.FxCop.Rules.WcfSemantic.dll"
+
+      3. In thi project check that the output folder is pointing to the build folder of rules project:  
+
+      4. Set a breakpoint and run with F5
+
+	  5. Check the result in the file results.xml located in the output folder of the rules project.

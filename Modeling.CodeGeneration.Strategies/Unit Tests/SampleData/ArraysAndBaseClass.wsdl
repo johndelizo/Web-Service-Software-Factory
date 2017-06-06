@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.processclaims.com/" xmlns:s1="http://www.cieca.com/BMS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.processclaims.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema targetNamespace="http://www.processclaims.com/">
+      <s:complexType name="AnySchema">
+        <s:sequence>
+          <s:any minOccurs="0" maxOccurs="unbounded" processContents="lax" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <xs:schema xmlns:ns0="http://ProcessClaims.BizTalk.Cieca.Schemas.PropertySchema.PropertySchema" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns="http://www.cieca.com/BMS" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.cieca.com/BMS" version="2.5.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:include schemaLocation="ArraysAndBaseClassTypes1.xsd" />
+      <xs:element name="AttachmentAddRq">
+        <xs:annotation>
+          <xs:documentation>Attachment add request</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="s1:MessageHeaderType">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="SvcProviderName" type="s1:Identifier" />
+                <xs:element name="DocumentInfo" type="s1:DocumentInfoType" />
+                <xs:element minOccurs="0" name="AdminInfo" type="s1:AdminInfoType" />
+                <xs:element minOccurs="0" name="ClaimInfo" type="s1:ClaimInfoType" />
+                <xs:element name="VehicleInfo" type="s1:VehicleInfoType" />
+                <xs:element maxOccurs="unbounded" name="DocAttachment" type="s1:DocAttachmentType" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AttachmentAddRs">
+        <xs:annotation>
+          <xs:documentation>Attachment add response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="s1:MessageHeaderType">
+              <xs:sequence>
+                <xs:element name="ApplicationStatus" type="s1:ApplicationStatusType" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="AddAttachmentMessageIn">
+    <wsdl:part name="part" element="s1:AttachmentAddRq">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">BizTalk part types:
+BizTalk part type (TypeName="AttachmentAddRq", AssemblyName="BMSAttachmentMessages", TargetNamespace="http://www.cieca.com/BMS", RootName="AttachmentAddRq")
+</documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AddAttachmentMessageOut">
+    <wsdl:part name="part" element="s1:AttachmentAddRs">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">BizTalk part types:
+BizTalk part type (TypeName="AttachmentAddRs", AssemblyName="BMSAttachmentMessages", TargetNamespace="http://www.cieca.com/BMS", RootName="AttachmentAddRs")
+</documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AttachmentServicePortType">
+    <wsdl:operation name="AddAttachment">
+      <wsdl:input message="tns:AddAttachmentMessageIn" />
+      <wsdl:output message="tns:AddAttachmentMessageOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AttachmentServiceBinding" type="tns:AttachmentServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAttachment">
+      <soap:operation soapAction="http://www.processclaims.com/AttachmentService/AddAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AttachmentService">
+    <wsdl:port name="AttachmentServicePort" binding="tns:AttachmentServiceBinding">
+      <soap:address location="http://bts.processclaims.com/CIECAServices2/AttachmentService.ashx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

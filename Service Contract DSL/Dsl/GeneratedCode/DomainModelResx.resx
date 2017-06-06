@@ -1,0 +1,1487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDslDomainModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDsl</value>
+    <comment>Description for DslLibrary &apos;ServiceContractDsl&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDslDomainModel.DisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>DisplayName for DslLibrary &apos;ServiceContractDsl&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel.DisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/ImplementationTechnology.Description" xml:space="preserve">
+    <value>This associates a platform technology with each of the shapes on the design surface. As a result, each shape may acquire additional properties specific for the chosen technology.</value>
+    <comment>Description for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/ImplementationTechnology.DisplayName" xml:space="preserve">
+    <value>Implementation Technology</value>
+    <comment>DisplayName for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/ImplementationTechnology.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/ProjectMappingTable.Description" xml:space="preserve">
+    <value>Allows you to select the project mapping you would like to generate artifacts to. The drop-down lists the named entries in the ProjectMapping.xml file. Creating an implementation project structure will add a new entry to the project mapping table. The Project Mapping Table entry associates shapes on the design surface with the projects that will contain the code for those shapes.</value>
+    <comment>Description for DomainProperty &apos;ProjectMappingTable&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/ProjectMappingTable.DisplayName" xml:space="preserve">
+    <value>Project Mapping Table</value>
+    <comment>DisplayName for DomainProperty &apos;ProjectMappingTable&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/ProjectMappingTable.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ProjectMappingTable&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/Namespace.Description" xml:space="preserve">
+    <value>This value represents the default XML namespace that will be applied to each shape added to the design surface.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/Namespace.DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/Namespace.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/SerializerType.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel.Serializer Type</value>
+    <comment>Description for DomainProperty &apos;SerializerType&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/SerializerType.DisplayName" xml:space="preserve">
+    <value>Serializer Type</value>
+    <comment>DisplayName for DomainProperty &apos;SerializerType&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModel/SerializerType.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;SerializerType&apos; on DomainClass &apos;ServiceContractModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract.Description" xml:space="preserve">
+    <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
+    <comment>Description for DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract.DisplayName" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Name.Description" xml:space="preserve">
+    <value>The name of the service contract.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Namespace.Description" xml:space="preserve">
+    <value>The XML namespace of the service contract.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Namespace.DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Namespace.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Remarks.Description" xml:space="preserve">
+    <value>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</value>
+    <comment>Description for DomainProperty &apos;Remarks&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Remarks.DisplayName" xml:space="preserve">
+    <value>Remarks</value>
+    <comment>DisplayName for DomainProperty &apos;Remarks&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContract/Remarks.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Remarks&apos; on DomainClass &apos;ServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Operation</value>
+    <comment>Description for DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation.DisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>DisplayName for DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Name.Description" xml:space="preserve">
+    <value>The name of the operation.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Action.Description" xml:space="preserve">
+    <value>Represents the WS-Addressing action attribute, which is used for dispatching the request.</value>
+    <comment>Description for DomainProperty &apos;Action&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Action.DisplayName" xml:space="preserve">
+    <value>Action</value>
+    <comment>DisplayName for DomainProperty &apos;Action&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Action.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Action&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/IsOneWay.Description" xml:space="preserve">
+    <value>Indicates whether or not an operation returns a reply or fault message.</value>
+    <comment>Description for DomainProperty &apos;IsOneWay&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/IsOneWay.DisplayName" xml:space="preserve">
+    <value>Is One Way</value>
+    <comment>DisplayName for DomainProperty &apos;IsOneWay&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/IsOneWay.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;IsOneWay&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Operation.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Remarks.Description" xml:space="preserve">
+    <value>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</value>
+    <comment>Description for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Remarks.DisplayName" xml:space="preserve">
+    <value>Remarks</value>
+    <comment>DisplayName for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Operation/Remarks.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Operation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Service</value>
+    <comment>Description for DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service.DisplayName" xml:space="preserve">
+    <value>Service</value>
+    <comment>DisplayName for DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Name.Description" xml:space="preserve">
+    <value>The name of the service.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Service.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Namespace.Description" xml:space="preserve">
+    <value>The XML namespace of the service.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Namespace.DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Namespace.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Remarks.Description" xml:space="preserve">
+    <value>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</value>
+    <comment>Description for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Remarks.DisplayName" xml:space="preserve">
+    <value>Remarks</value>
+    <comment>DisplayName for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Service/Remarks.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Service&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Message.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Message</value>
+    <comment>Description for DomainClass &apos;Message&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Message.DisplayName" xml:space="preserve">
+    <value>Message</value>
+    <comment>DisplayName for DomainClass &apos;Message&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart</value>
+    <comment>Description for DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart.DisplayName" xml:space="preserve">
+    <value>Message Part</value>
+    <comment>DisplayName for DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/Name.Description" xml:space="preserve">
+    <value>The name of the data contract.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/Remarks.Description" xml:space="preserve">
+    <value>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</value>
+    <comment>Description for DomainProperty &apos;Remarks&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/Remarks.DisplayName" xml:space="preserve">
+    <value>Remarks</value>
+    <comment>DisplayName for DomainProperty &apos;Remarks&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessagePart/Remarks.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Remarks&apos; on DomainClass &apos;MessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Fault</value>
+    <comment>Description for DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault.DisplayName" xml:space="preserve">
+    <value>Fault</value>
+    <comment>DisplayName for DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/Name.Description" xml:space="preserve">
+    <value>The name of the fault contract.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.Fault.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/Remarks.Description" xml:space="preserve">
+    <value>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</value>
+    <comment>Description for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/Remarks.DisplayName" xml:space="preserve">
+    <value>Remarks</value>
+    <comment>DisplayName for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.Fault/Remarks.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Remarks&apos; on DomainClass &apos;Fault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractMessagePart.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractMessagePart</value>
+    <comment>Description for DomainClass &apos;DataContractMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractMessagePart.DisplayName" xml:space="preserve">
+    <value>Data Contract Message Part</value>
+    <comment>DisplayName for DomainClass &apos;DataContractMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractMessagePart/Type.Description" xml:space="preserve">
+    <value>A cross-model reference to the associated data contract type on the data contract model.</value>
+    <comment>Description for DomainProperty &apos;Type&apos; on DomainClass &apos;DataContractMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractMessagePart/Type.DisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>DisplayName for DomainProperty &apos;Type&apos; on DomainClass &apos;DataContractMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractMessagePart/Type.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Type&apos; on DomainClass &apos;DataContractMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart</value>
+    <comment>Description for DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart.DisplayName" xml:space="preserve">
+    <value>Primitive Message Part</value>
+    <comment>DisplayName for DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/Type.Description" xml:space="preserve">
+    <value>A primitive .NET type.</value>
+    <comment>Description for DomainProperty &apos;Type&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/Type.DisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>DisplayName for DomainProperty &apos;Type&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/Type.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Type&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/IsNullable.Description" xml:space="preserve">
+    <value>Indicates whether or not this part can have a null value.</value>
+    <comment>Description for DomainProperty &apos;IsNullable&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/IsNullable.DisplayName" xml:space="preserve">
+    <value>Is Nullable</value>
+    <comment>DisplayName for DomainProperty &apos;IsNullable&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/IsNullable.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;IsNullable&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/IsCollection.Description" xml:space="preserve">
+    <value>Indicates whether or not this part is a generic list collection. </value>
+    <comment>Description for DomainProperty &apos;IsCollection&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/IsCollection.DisplayName" xml:space="preserve">
+    <value>Is Collection</value>
+    <comment>DisplayName for DomainProperty &apos;IsCollection&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.PrimitiveMessagePart/IsCollection.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;IsCollection&apos; on DomainClass &apos;PrimitiveMessagePart&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase</value>
+    <comment>Description for DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase.DisplayName" xml:space="preserve">
+    <value>Message Base</value>
+    <comment>DisplayName for DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Name.Description" xml:space="preserve">
+    <value>The name of this message.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Namespace.Description" xml:space="preserve">
+    <value>The XML namespace of this message.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Namespace.DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Namespace.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Remarks.Description" xml:space="preserve">
+    <value>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</value>
+    <comment>Description for DomainProperty &apos;Remarks&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Remarks.DisplayName" xml:space="preserve">
+    <value>Remarks</value>
+    <comment>DisplayName for DomainProperty &apos;Remarks&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageBase/Remarks.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Remarks&apos; on DomainClass &apos;MessageBase&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage</value>
+    <comment>Description for DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage.DisplayName" xml:space="preserve">
+    <value>XSD Message</value>
+    <comment>DisplayName for DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage/Element.Description" xml:space="preserve">
+    <value>A reference to a complexType or element in an XSD file that represents this message.</value>
+    <comment>Description for DomainProperty &apos;Element&apos; on DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainProperty &apos;Element&apos; on DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage/Element.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Element&apos; on DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage/IsWrapped.Description" xml:space="preserve">
+    <value>Indicates if the message contains a wrapper element.</value>
+    <comment>Description for DomainProperty &apos;IsWrapped&apos; on DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage/IsWrapped.DisplayName" xml:space="preserve">
+    <value>Is Wrapped</value>
+    <comment>DisplayName for DomainProperty &apos;IsWrapped&apos; on DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessage/IsWrapped.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;IsWrapped&apos; on DomainClass &apos;XsdMessage&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractFault.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractFault</value>
+    <comment>Description for DomainClass &apos;DataContractFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractFault.DisplayName" xml:space="preserve">
+    <value>Data Contract Fault</value>
+    <comment>DisplayName for DomainClass &apos;DataContractFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractFault/Type.Description" xml:space="preserve">
+    <value>A cross-model reference to the associated data contract type on the data contract model.</value>
+    <comment>Description for DomainProperty &apos;Type&apos; on DomainClass &apos;DataContractFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractFault/Type.DisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>DisplayName for DomainProperty &apos;Type&apos; on DomainClass &apos;DataContractFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.DataContractFault/Type.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Type&apos; on DomainClass &apos;DataContractFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdElementFault.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.XsdElementFault</value>
+    <comment>Description for DomainClass &apos;XsdElementFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdElementFault.DisplayName" xml:space="preserve">
+    <value>XSD Element Fault</value>
+    <comment>DisplayName for DomainClass &apos;XsdElementFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdElementFault/Element.Description" xml:space="preserve">
+    <value>A reference to a complexType or element in an XSD file that represents this fault.</value>
+    <comment>Description for DomainProperty &apos;Element&apos; on DomainClass &apos;XsdElementFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdElementFault/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainProperty &apos;Element&apos; on DomainClass &apos;XsdElementFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdElementFault/Element.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Element&apos; on DomainClass &apos;XsdElementFault&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts.Description" xml:space="preserve">
+    <value>Embedding relationship between the Model and Elements</value>
+    <comment>Description for DomainClass &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts.DisplayName" xml:space="preserve">
+    <value>Service Contract Model Has Service Contracts</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContractModel.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContractModel.DisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContractModel.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContractModel.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contracts</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContract.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContract.DisplayName" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContract.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServiceContracts/ServiceContract.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractModelHasServiceContracts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations</value>
+    <comment>Description for DomainClass &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations.DisplayName" xml:space="preserve">
+    <value>Service Contract Model Has Operations</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/ServiceContractModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations.ServiceContractModel</value>
+    <comment>Description for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/ServiceContractModel.DisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/ServiceContractModel.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/ServiceContractModel.PropertyDisplayName" xml:space="preserve">
+    <value>Operations</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/Operation.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations.Operation</value>
+    <comment>Description for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/Operation.DisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>DisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/Operation.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasOperations/Operation.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractModelHasOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations</value>
+    <comment>Description for DomainClass &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations.DisplayName" xml:space="preserve">
+    <value>Service Contract References Operations</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/ServiceContract.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations.ServiceContract</value>
+    <comment>Description for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/ServiceContract.DisplayName" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/ServiceContract.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/ServiceContract.PropertyDisplayName" xml:space="preserve">
+    <value>Operations</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/Operation.Description" xml:space="preserve">
+    <value>The service contract this operation is associated with.</value>
+    <comment>Description for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/Operation.DisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>DisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/Operation.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractReferencesOperations/Operation.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;ServiceContractReferencesOperations&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices</value>
+    <comment>Description for DomainClass &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices.DisplayName" xml:space="preserve">
+    <value>Service Contract Model Has Services</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/ServiceContractModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices.ServiceContractModel</value>
+    <comment>Description for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/ServiceContractModel.DisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/ServiceContractModel.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/ServiceContractModel.PropertyDisplayName" xml:space="preserve">
+    <value>Services</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/Service.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices.Service</value>
+    <comment>Description for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/Service.DisplayName" xml:space="preserve">
+    <value>Service</value>
+    <comment>DisplayName for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/Service.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasServices/Service.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceContractModelHasServices&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts</value>
+    <comment>Description for DomainClass &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract.DisplayName" xml:space="preserve">
+    <value>Service References Service Contract</value>
+    <comment>DisplayName for DomainClass &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/Service.Description" xml:space="preserve">
+    <value>The contract that the service implements.</value>
+    <comment>Description for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/Service.DisplayName" xml:space="preserve">
+    <value>Service</value>
+    <comment>DisplayName for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/Service.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/Service.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Service&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/ServiceContract.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract.ServiceContract</value>
+    <comment>Description for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/ServiceContract.DisplayName" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/ServiceContract.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceReferencesServiceContract/ServiceContract.PropertyDisplayName" xml:space="preserve">
+    <value>Service</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContract&apos; on DomainRelationship &apos;ServiceReferencesServiceContract&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults</value>
+    <comment>Description for DomainClass &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults.DisplayName" xml:space="preserve">
+    <value>Operation Has Faults</value>
+    <comment>DisplayName for DomainClass &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Operation.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults.Operation</value>
+    <comment>Description for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Operation.DisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>DisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Operation.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Operation.PropertyDisplayName" xml:space="preserve">
+    <value>Faults</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Fault.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults.Fault</value>
+    <comment>Description for DomainRole &apos;Fault&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Fault.DisplayName" xml:space="preserve">
+    <value>Fault</value>
+    <comment>DisplayName for DomainRole &apos;Fault&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Fault.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Fault&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationHasFaults/Fault.PropertyDisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Fault&apos; on DomainRelationship &apos;OperationHasFaults&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages</value>
+    <comment>Description for DomainClass &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages.DisplayName" xml:space="preserve">
+    <value>Service Contract Model Has Messages</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/ServiceContractModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages.ServiceContractModel</value>
+    <comment>Description for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/ServiceContractModel.DisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>DisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/ServiceContractModel.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/ServiceContractModel.PropertyDisplayName" xml:space="preserve">
+    <value>Messages</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceContractModel&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/MessageBase.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages.MessageBase</value>
+    <comment>Description for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/MessageBase.DisplayName" xml:space="preserve">
+    <value>Message Base</value>
+    <comment>DisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/MessageBase.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractModelHasMessages/MessageBase.PropertyDisplayName" xml:space="preserve">
+    <value>Service Contract Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;ServiceContractModelHasMessages&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation</value>
+    <comment>Description for DomainClass &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation.DisplayName" xml:space="preserve">
+    <value>Request Referenced By Operation</value>
+    <comment>DisplayName for DomainClass &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/MessageBase.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation.MessageBase</value>
+    <comment>Description for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/MessageBase.DisplayName" xml:space="preserve">
+    <value>Message Base</value>
+    <comment>DisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/MessageBase.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/MessageBase.PropertyDisplayName" xml:space="preserve">
+    <value>Request For</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/Operation.Description" xml:space="preserve">
+    <value>The message that functions as a request to this operation. These values can be controlled by connecting the messages on the design surface.</value>
+    <comment>Description for DomainRole &apos;Operation&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/Operation.DisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>DisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/Operation.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Operation&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.RequestReferencedByOperation/Operation.PropertyDisplayName" xml:space="preserve">
+    <value>Request</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;RequestReferencedByOperation&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse</value>
+    <comment>Description for DomainClass &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse.DisplayName" xml:space="preserve">
+    <value>Operation References Response</value>
+    <comment>DisplayName for DomainClass &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/Operation.Description" xml:space="preserve">
+    <value>The message that functions as a response to this operation. These values can be controlled by connecting the messages on the design surface.</value>
+    <comment>Description for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/Operation.DisplayName" xml:space="preserve">
+    <value>Operation</value>
+    <comment>DisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/Operation.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/Operation.PropertyDisplayName" xml:space="preserve">
+    <value>Response</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operation&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/MessageBase.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse.MessageBase</value>
+    <comment>Description for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/MessageBase.DisplayName" xml:space="preserve">
+    <value>Message Base</value>
+    <comment>DisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/MessageBase.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationReferencesResponse/MessageBase.PropertyDisplayName" xml:space="preserve">
+    <value>Response For</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;OperationReferencesResponse&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts</value>
+    <comment>Description for DomainClass &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts.DisplayName" xml:space="preserve">
+    <value>Message Has Message Parts</value>
+    <comment>DisplayName for DomainClass &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessageBase.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts.MessageBase</value>
+    <comment>Description for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessageBase.DisplayName" xml:space="preserve">
+    <value>Message Base</value>
+    <comment>DisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessageBase.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessageBase.PropertyDisplayName" xml:space="preserve">
+    <value>MessageParts</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MessageBase&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessagePart.Description" xml:space="preserve">
+    <value>A cross-model reference to the associated data contract type on the data contract model.</value>
+    <comment>Description for DomainRole &apos;MessagePart&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessagePart.DisplayName" xml:space="preserve">
+    <value>Message</value>
+    <comment>DisplayName for DomainRole &apos;MessagePart&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessagePart.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;MessagePart&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageHasMessageParts/MessagePart.PropertyDisplayName" xml:space="preserve">
+    <value>Message</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MessagePart&apos; on DomainRelationship &apos;MessageHasMessageParts&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.BindingStyle/RPC.DisplayName" xml:space="preserve">
+    <value>RPC</value>
+    <comment>Display name for EnumerationLiteral &apos;RPC&apos; on DomainEnumeration &apos;BindingStyle&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.BindingStyle/RPC.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.BindingStyle.RPC</value>
+    <comment>Description for EnumerationLiteral &apos;RPC&apos; on DomainEnumeration &apos;BindingStyle&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.BindingStyle/Document.DisplayName" xml:space="preserve">
+    <value>Document</value>
+    <comment>Display name for EnumerationLiteral &apos;Document&apos; on DomainEnumeration &apos;BindingStyle&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.BindingStyle/Document.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.BindingStyle.Document</value>
+    <comment>Description for EnumerationLiteral &apos;Document&apos; on DomainEnumeration &apos;BindingStyle&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceEncoding/Literal.DisplayName" xml:space="preserve">
+    <value>Literal</value>
+    <comment>Display name for EnumerationLiteral &apos;Literal&apos; on DomainEnumeration &apos;ServiceEncoding&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceEncoding/Literal.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceEncoding.Literal</value>
+    <comment>Description for EnumerationLiteral &apos;Literal&apos; on DomainEnumeration &apos;ServiceEncoding&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceEncoding/Encoding.DisplayName" xml:space="preserve">
+    <value>Encoding</value>
+    <comment>Display name for EnumerationLiteral &apos;Encoding&apos; on DomainEnumeration &apos;ServiceEncoding&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceEncoding/Encoding.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceEncoding.Encoding</value>
+    <comment>Description for EnumerationLiteral &apos;Encoding&apos; on DomainEnumeration &apos;ServiceEncoding&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageType/RequestMessage.DisplayName" xml:space="preserve">
+    <value>RequestMessage</value>
+    <comment>Display name for EnumerationLiteral &apos;RequestMessage&apos; on DomainEnumeration &apos;MessageType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageType/RequestMessage.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageType.RequestMessage</value>
+    <comment>Description for EnumerationLiteral &apos;RequestMessage&apos; on DomainEnumeration &apos;MessageType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageType/ResponseMessage.DisplayName" xml:space="preserve">
+    <value>ResponseMessage</value>
+    <comment>Display name for EnumerationLiteral &apos;ResponseMessage&apos; on DomainEnumeration &apos;MessageType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageType/ResponseMessage.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageType.ResponseMessage</value>
+    <comment>Description for EnumerationLiteral &apos;ResponseMessage&apos; on DomainEnumeration &apos;MessageType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType/XmlSerializer.DisplayName" xml:space="preserve">
+    <value>XmlSerializer</value>
+    <comment>Display name for EnumerationLiteral &apos;XmlSerializer&apos; on DomainEnumeration &apos;SerializerType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType/XmlSerializer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType.XmlSerializer</value>
+    <comment>Description for EnumerationLiteral &apos;XmlSerializer&apos; on DomainEnumeration &apos;SerializerType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType/DataContractSerializer.DisplayName" xml:space="preserve">
+    <value>DataContractSerializer</value>
+    <comment>Display name for EnumerationLiteral &apos;DataContractSerializer&apos; on DomainEnumeration &apos;SerializerType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType/DataContractSerializer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType.DataContractSerializer</value>
+    <comment>Description for EnumerationLiteral &apos;DataContractSerializer&apos; on DomainEnumeration &apos;SerializerType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractShape.Description" xml:space="preserve">
+    <value>Shape used to represent ExampleElements on a Diagram.</value>
+    <comment>Description for DomainClass &apos;ServiceContractShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractShape.DisplayName" xml:space="preserve">
+    <value>Service Contract Shape</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractShape&apos;</comment>
+  </data>
+  <data name="ServiceContractShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ServiceContractShapeTypeDefaultText" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageShape</value>
+    <comment>Description for DomainClass &apos;MessageShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageShape.DisplayName" xml:space="preserve">
+    <value>Message Shape</value>
+    <comment>DisplayName for DomainClass &apos;MessageShape&apos;</comment>
+  </data>
+  <data name="MessageShapePartsTitle" xml:space="preserve">
+    <value>Parts</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MessageShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MessageShapeTypeDefaultText" xml:space="preserve">
+    <value>Message</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.OperationShape</value>
+    <comment>Description for DomainClass &apos;OperationShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationShape.DisplayName" xml:space="preserve">
+    <value>Operation Shape</value>
+    <comment>DisplayName for DomainClass &apos;OperationShape&apos;</comment>
+  </data>
+  <data name="OperationShapeFaultsTitle" xml:space="preserve">
+    <value>Faults</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="OperationShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="OperationShapeTypeDefaultText" xml:space="preserve">
+    <value>Operation</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceShape</value>
+    <comment>Description for DomainClass &apos;ServiceShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceShape.DisplayName" xml:space="preserve">
+    <value>Service Shape</value>
+    <comment>DisplayName for DomainClass &apos;ServiceShape&apos;</comment>
+  </data>
+  <data name="ServiceShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ServiceShapeTypeDefaultText" xml:space="preserve">
+    <value>Service</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessageShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessageShape</value>
+    <comment>Description for DomainClass &apos;XsdMessageShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessageShape.DisplayName" xml:space="preserve">
+    <value>XSD Message Shape</value>
+    <comment>DisplayName for DomainClass &apos;XsdMessageShape&apos;</comment>
+  </data>
+  <data name="XsdMessageShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="XsdMessageShapeTypeDefaultText" xml:space="preserve">
+    <value>XSD Message</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationConnector.Description" xml:space="preserve">
+    <value>Connect operations to service contracts</value>
+    <comment>Description for DomainClass &apos;OperationConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.OperationConnector.DisplayName" xml:space="preserve">
+    <value>Operation Connector</value>
+    <comment>DisplayName for DomainClass &apos;OperationConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceConnector.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceConnector</value>
+    <comment>Description for DomainClass &apos;ServiceConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceConnector.DisplayName" xml:space="preserve">
+    <value>Service Connector</value>
+    <comment>DisplayName for DomainClass &apos;ServiceConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageOperationConnector.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.MessageOperationConnector</value>
+    <comment>Description for DomainClass &apos;MessageOperationConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.MessageOperationConnector.DisplayName" xml:space="preserve">
+    <value>Message Operation Connector</value>
+    <comment>DisplayName for DomainClass &apos;MessageOperationConnector&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>Service Contract Model (*.servicecontract)|*.servicecontract</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>Service Contract Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDiagram.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDiagram</value>
+    <comment>Description for DomainClass &apos;ServiceContractDiagram&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractDiagram.DisplayName" xml:space="preserve">
+    <value>Service Contract Diagram</value>
+    <comment>DisplayName for DomainClass &apos;ServiceContractDiagram&apos;</comment>
+  </data>
+  <data name="Service Contract ToolsToolboxTab" xml:space="preserve">
+    <value>Service Contract Tools</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="ServiceToolboxItem" xml:space="preserve">
+    <value>Service</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ServiceToolboxTooltip" xml:space="preserve">
+    <value>Represents the implementation of the contract. Unlike class definitions, this shape is not intended to implement multiple service interfaces (contracts). This shape can only connect to a single service contract.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ServiceContractToolboxItem" xml:space="preserve">
+    <value>Service Contract</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ServiceContractToolboxTooltip" xml:space="preserve">
+    <value>Represents the service interface that associates multiple operations (methods). This shape connects to a single service shape and can connect to multiple operation shapes.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="OperationToolboxItem" xml:space="preserve">
+    <value>Operation</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="OperationToolboxTooltip" xml:space="preserve">
+    <value>Represents a method that can be invoked on the service. This shape connects to a single service contract and one or two message contracts.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="MessageToolboxItem" xml:space="preserve">
+    <value>Message</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="MessageToolboxTooltip" xml:space="preserve">
+    <value>Represents a request or response message that contains data contracts or primitive types (not types from an XSD). This shape connects to a single operation. To make it a request message, drag the connector shape from the message shape to the operation shape. To make it a response message, drag the connector shape from the operation shape to the message shape.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="XsdMessageToolboxItem" xml:space="preserve">
+    <value>XSD Message</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="XsdMessageToolboxTooltip" xml:space="preserve">
+    <value>Represents a reference to an element or a complex type within an XSD file that represents a request or response message. To use this shape, you need to add a schema as an existing item to the Schemas folder of the solution. This shape connects to a single operation. To make it a request message, drag the connector shape from the message shape to the operation shape. To make it a response message, drag the connector shape from the operation shape to the message shape.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConnectToolToolboxItem" xml:space="preserve">
+    <value>Connector</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConnectToolToolboxTooltip" xml:space="preserve">
+    <value>Makes valid connections between shapes on the design surface. To use the connector, click the Connector shape in the Toolbox, click the first shape, and then click the second shape. For more information about connecting message shapes, hover over the Message or XSD Message shapes in the Toolbox.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ServiceContractShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceContract.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="MessageShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Message.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="OperationShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Operation.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ServiceShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Service.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="XsdMessageShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Message.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="MessageExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Message.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Service.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="OperationExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Operation.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceContractExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceContract.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="XsdMessageExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Message.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Service.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceContractToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceContract.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="OperationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Operation.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="MessageToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Message.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="XsdMessageToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Message.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConnectToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConnectorTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

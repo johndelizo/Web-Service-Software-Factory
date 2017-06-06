@@ -1,0 +1,26 @@
+<Rules FriendlyName="WCF Security Rules Tests">
+  <Rule TypeName="MockConfigurationIntrospectionRule" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity.Tests" 
+        CheckId="WCFS00001">
+    <Name>Test rule for MockConfigurationIntrospectionRule class</Name>
+    <Description>Test description.</Description>
+    <Url></Url>
+    <Resolution>Test resolution.</Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner />
+  </Rule>
+  <Rule TypeName="MockServiceModelConfigurationRule" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity.Tests" 
+        CheckId="WCFS00002">
+    <Name>Test rule for MockServiceModelConfigurationRule class</Name>
+    <Description>Test description.</Description>
+    <Url></Url>
+    <Resolution>Test resolution.</Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner />
+  </Rule>
+</Rules>

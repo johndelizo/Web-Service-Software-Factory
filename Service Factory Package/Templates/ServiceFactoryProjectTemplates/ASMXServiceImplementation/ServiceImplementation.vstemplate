@@ -1,0 +1,18 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>ServiceImplementation</Name>
+    <Description>ServiceImplementation</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>20</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>ServiceImplementation</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ServiceImplementation.csproj" ReplaceParameters="true">
+      <Folder Name="GeneratedCode" TargetFolderName="GeneratedCode" />
+      <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

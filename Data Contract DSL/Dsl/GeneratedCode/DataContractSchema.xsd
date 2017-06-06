@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="DataContractDslSchema" targetNamespace="http://schemas.microsoft.com/dsltools/DataContractDsl" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/DataContractDsl" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- DataContractModel -->
+  <xsd:element name="dataContractModel" type="DataContractModel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DataContractModel">
+    <xsd:annotation>
+      <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: DataContractModelHasContracts -->
+          <xsd:element name="contracts" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DataContractModelHasContracts</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="dataContractModelHasContracts">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from DataContractModelHasContracts needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="contract" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImplementationTechnology -->
+        <xsd:attribute name="implementationTechnology" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>This associates a platform technology with each of the shapes on the design surface. As a result, each shape may acquire additional properties specific for the chosen technology.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ProjectMappingTable -->
+        <xsd:attribute name="projectMappingTable" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The named entries in the ProjectMapping.xml file. A new entry is created each time you create an implementation project structure. The Project Mapping Table entry associates shapes on the design surface with the projects that will contain the code for those shapes.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>This value represents the default XML namespace that will be applied to each shape added to the design surface.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractModel Moniker -->
+  <xsd:element name="dataContractModelMoniker" type="DataContractModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DataContractModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractModel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContract -->
+  <xsd:element name="dataContract" type="DataContract" substitutionGroup="dataContractBase" />
+  <xsd:complexType name="DataContract">
+    <xsd:complexContent>
+      <xsd:extension base="DataContractBase">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: DataContractHasDataMembers -->
+          <xsd:element name="dataMembers" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DataContractHasDataMembers</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="dataContractHasDataMembers">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from DataContractHasDataMembers needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="dataMember" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContract Moniker -->
+  <xsd:element name="dataContractMoniker" type="DataContractMoniker" substitutionGroup="dataContractBaseMoniker" />
+  <xsd:complexType name="DataContractMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContract instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataContractBaseMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelElementReference -->
+  <xsd:element name="modelElementReference" type="ModelElementReference" substitutionGroup="dataMember" />
+  <xsd:complexType name="ModelElementReference">
+    <xsd:complexContent>
+      <xsd:extension base="DataMember">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ModelElementGuid -->
+        <xsd:attribute name="modelElementGuid" type="xsd:string" />
+        <!-- Property: Type -->
+        <xsd:attribute name="type" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A cross-model reference to the associated data contract type.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ModelElementReference Moniker -->
+  <xsd:element name="modelElementReferenceMoniker" type="ModelElementReferenceMoniker" substitutionGroup="dataMemberMoniker" />
+  <xsd:complexType name="ModelElementReferenceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ModelElementReference instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataMemberMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PrimitiveDataType -->
+  <xsd:element name="primitiveDataType" type="PrimitiveDataType" substitutionGroup="dataMember" />
+  <xsd:complexType name="PrimitiveDataType">
+    <xsd:complexContent>
+      <xsd:extension base="DataMember">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsNullable -->
+        <xsd:attribute name="isNullable" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether or not this part can have a null value.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Type -->
+        <xsd:attribute name="type" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A .NET primitive type.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PrimitiveDataType Moniker -->
+  <xsd:element name="primitiveDataTypeMoniker" type="PrimitiveDataTypeMoniker" substitutionGroup="dataMemberMoniker" />
+  <xsd:complexType name="PrimitiveDataTypeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PrimitiveDataType instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataMemberMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FaultContract -->
+  <xsd:element name="faultContract" type="FaultContract" substitutionGroup="contract" />
+  <xsd:complexType name="FaultContract">
+    <xsd:complexContent>
+      <xsd:extension base="Contract">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: FaultContractHasDataMembers -->
+          <xsd:element name="dataMembers" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of FaultContractHasDataMembers</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="faultContractHasDataMembers">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from FaultContractHasDataMembers needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="dataMember" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FaultContract Moniker -->
+  <xsd:element name="faultContractMoniker" type="FaultContractMoniker" substitutionGroup="contractMoniker" />
+  <xsd:complexType name="FaultContractMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FaultContract instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ContractMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractBase -->
+  <xsd:element name="dataContractBase" abstract="true" type="DataContractBase" substitutionGroup="contract" />
+  <xsd:complexType name="DataContractBase" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="Contract">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: DataContractBaseCanBeContainedOnContracts -->
+          <xsd:element name="contracts" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DataContractBaseCanBeContainedOnContracts</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="dataContractBaseCanBeContainedOnContracts" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of DataContractBaseCanBeContainedOnContracts needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: DataContractBaseIsBeingReferenceOnDataContractCollections -->
+          <xsd:element name="dataContractCollections" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DataContractBaseIsBeingReferenceOnDataContractCollections</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="dataContractBaseIsBeingReferenceOnDataContractCollections">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from DataContractBaseIsBeingReferenceOnDataContractCollections needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="dataContractCollectionMoniker" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractBase Moniker -->
+  <xsd:element name="dataContractBaseMoniker" abstract="true" type="DataContractBaseMoniker" substitutionGroup="contractMoniker" />
+  <xsd:complexType name="DataContractBaseMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractBase instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ContractMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractCollection -->
+  <xsd:element name="dataContractCollection" type="DataContractCollection" substitutionGroup="dataContractCollectionBase" />
+  <xsd:complexType name="DataContractCollection">
+    <xsd:complexContent>
+      <xsd:extension base="DataContractCollectionBase">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractCollection Moniker -->
+  <xsd:element name="dataContractCollectionMoniker" type="DataContractCollectionMoniker" substitutionGroup="dataContractCollectionBaseMoniker" />
+  <xsd:complexType name="DataContractCollectionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractCollection instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataContractCollectionBaseMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractEnum -->
+  <xsd:element name="dataContractEnum" type="DataContractEnum" substitutionGroup="dataContractBase" />
+  <xsd:complexType name="DataContractEnum">
+    <xsd:complexContent>
+      <xsd:extension base="DataContractBase">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: DataContractEnumHasEnumNamedValues -->
+          <xsd:element name="enumNamedValues" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DataContractEnumHasEnumNamedValues</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="dataContractEnumHasEnumNamedValues">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from DataContractEnumHasEnumNamedValues needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="enumNamedValue" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractEnum Moniker -->
+  <xsd:element name="dataContractEnumMoniker" type="DataContractEnumMoniker" substitutionGroup="dataContractBaseMoniker" />
+  <xsd:complexType name="DataContractEnumMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractEnum instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataContractBaseMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EnumNamedValue -->
+  <xsd:element name="enumNamedValue" type="EnumNamedValue" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EnumNamedValue">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Value -->
+        <xsd:attribute name="value" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The value of the enum value.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the enum value.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EnumNamedValue Moniker -->
+  <xsd:element name="enumNamedValueMoniker" type="EnumNamedValueMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EnumNamedValueMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EnumNamedValue instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExtensibleModelElement -->
+  <xsd:element name="extensibleModelElement" abstract="true" type="ExtensibleModelElement" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExtensibleModelElement" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of this model element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExtensibleModelElement Moniker -->
+  <xsd:element name="extensibleModelElementMoniker" abstract="true" type="ExtensibleModelElementMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExtensibleModelElementMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExtensibleModelElement instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataMember -->
+  <xsd:element name="dataMember" abstract="true" type="DataMember" substitutionGroup="extensibleModelElement" />
+  <xsd:complexType name="DataMember" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElement">
+        <!-- Property: IsDataMember -->
+        <xsd:attribute name="isDataMember" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>The default value of true ensures this member is serialized into messages. Otherwise, it will not be serialized.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CollectionType -->
+        <xsd:attribute name="collectionType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>If this member represents a collection, this value controls the type of collection. None indicates that this member is not a collection.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataMember Moniker -->
+  <xsd:element name="dataMemberMoniker" abstract="true" type="DataMemberMoniker" substitutionGroup="extensibleModelElementMoniker" />
+  <xsd:complexType name="DataMemberMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataMember instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PrimitiveDataTypeCollection -->
+  <xsd:element name="primitiveDataTypeCollection" type="PrimitiveDataTypeCollection" substitutionGroup="dataContractCollectionBase" />
+  <xsd:complexType name="PrimitiveDataTypeCollection">
+    <xsd:complexContent>
+      <xsd:extension base="DataContractCollectionBase">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ItemType -->
+        <xsd:attribute name="itemType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The .NET primitive that defines this collection’s type. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PrimitiveDataTypeCollection Moniker -->
+  <xsd:element name="primitiveDataTypeCollectionMoniker" type="PrimitiveDataTypeCollectionMoniker" substitutionGroup="dataContractCollectionBaseMoniker" />
+  <xsd:complexType name="PrimitiveDataTypeCollectionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PrimitiveDataTypeCollection instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataContractCollectionBaseMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractCollectionBase -->
+  <xsd:element name="dataContractCollectionBase" abstract="true" type="DataContractCollectionBase" substitutionGroup="dataContractBase" />
+  <xsd:complexType name="DataContractCollectionBase" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="DataContractBase">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractCollectionBase Moniker -->
+  <xsd:element name="dataContractCollectionBaseMoniker" abstract="true" type="DataContractCollectionBaseMoniker" substitutionGroup="dataContractBaseMoniker" />
+  <xsd:complexType name="DataContractCollectionBaseMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractCollectionBase instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataContractBaseMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Contract -->
+  <xsd:element name="contract" abstract="true" type="Contract" substitutionGroup="extensibleModelElement" />
+  <xsd:complexType name="Contract" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElement">
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The XML namespace of this data/fault contract.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Contract Moniker -->
+  <xsd:element name="contractMoniker" abstract="true" type="ContractMoniker" substitutionGroup="extensibleModelElementMoniker" />
+  <xsd:complexType name="ContractMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Contract instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ReferenceDataType -->
+  <xsd:element name="referenceDataType" type="ReferenceDataType" substitutionGroup="dataMember" />
+  <xsd:complexType name="ReferenceDataType">
+    <xsd:complexContent>
+      <xsd:extension base="DataMember">
+        <!-- Property: Type -->
+        <xsd:attribute name="type" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A cross-model reference to the associated data contract type on the data contract model.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ReferenceDataType Moniker -->
+  <xsd:element name="referenceDataTypeMoniker" abstract="true" type="ReferenceDataTypeMoniker" substitutionGroup="dataMemberMoniker" />
+  <xsd:complexType name="ReferenceDataTypeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ReferenceDataType instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="DataMemberMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractEnumHasEnumNamedValues -->
+  <xsd:element name="dataContractEnumHasEnumNamedValues" abstract="true" type="DataContractEnumHasEnumNamedValues" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DataContractEnumHasEnumNamedValues" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end EnumNamedValue -->
+          <xsd:element ref="enumNamedValue" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractEnumHasEnumNamedValues Moniker -->
+  <xsd:element name="dataContractEnumHasEnumNamedValuesMoniker" abstract="true" type="DataContractEnumHasEnumNamedValuesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DataContractEnumHasEnumNamedValuesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractEnumHasEnumNamedValues instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractModelHasContracts -->
+  <xsd:element name="dataContractModelHasContracts" abstract="true" type="DataContractModelHasContracts" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DataContractModelHasContracts" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Contract -->
+          <xsd:element ref="contract" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractModelHasContracts Moniker -->
+  <xsd:element name="dataContractModelHasContractsMoniker" abstract="true" type="DataContractModelHasContractsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DataContractModelHasContractsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractModelHasContracts instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractHasDataMembers -->
+  <xsd:element name="dataContractHasDataMembers" abstract="true" type="DataContractHasDataMembers" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DataContractHasDataMembers" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end DataMember -->
+          <xsd:element ref="dataMember" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractHasDataMembers Moniker -->
+  <xsd:element name="dataContractHasDataMembersMoniker" abstract="true" type="DataContractHasDataMembersMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DataContractHasDataMembersMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractHasDataMembers instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractBaseCanBeContainedOnContracts -->
+  <xsd:element name="dataContractBaseCanBeContainedOnContracts" type="DataContractBaseCanBeContainedOnContracts" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DataContractBaseCanBeContainedOnContracts">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Contract -->
+          <xsd:element ref="contractMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractBaseCanBeContainedOnContracts Moniker -->
+  <xsd:element name="dataContractBaseCanBeContainedOnContractsMoniker" type="DataContractBaseCanBeContainedOnContractsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DataContractBaseCanBeContainedOnContractsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractBaseCanBeContainedOnContracts instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractBaseIsBeingReferenceOnDataContractCollections -->
+  <xsd:element name="dataContractBaseIsBeingReferenceOnDataContractCollections" abstract="true" type="DataContractBaseIsBeingReferenceOnDataContractCollections" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DataContractBaseIsBeingReferenceOnDataContractCollections" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end DataContractCollection -->
+          <xsd:element ref="dataContractCollectionMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractBaseIsBeingReferenceOnDataContractCollections Moniker -->
+  <xsd:element name="dataContractBaseIsBeingReferenceOnDataContractCollectionsMoniker" abstract="true" type="DataContractBaseIsBeingReferenceOnDataContractCollectionsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DataContractBaseIsBeingReferenceOnDataContractCollectionsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractBaseIsBeingReferenceOnDataContractCollections instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FaultContractHasDataMembers -->
+  <xsd:element name="faultContractHasDataMembers" abstract="true" type="FaultContractHasDataMembers" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FaultContractHasDataMembers" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end DataMember -->
+          <xsd:element ref="dataMember" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FaultContractHasDataMembers Moniker -->
+  <xsd:element name="faultContractHasDataMembersMoniker" abstract="true" type="FaultContractHasDataMembersMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FaultContractHasDataMembersMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FaultContractHasDataMembers instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum Multiplicity -->
+  <xsd:simpleType name="Multiplicity">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Single"/>
+      <xsd:enumeration value="Multiple"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>
+

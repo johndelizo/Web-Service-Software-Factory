@@ -1,0 +1,14 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.company.org"
+            xmlns="http://www.company.org" elementFormDefault="qualified">
+
+  <xs:include schemaLocation="Vertical.xsd"/>
+
+  <xs:element name="CompanyType" type="CompanyType"/>
+  <xs:complexType name="CompanyType">
+    <xs:sequence>
+      <xs:element name="VerticalType" type="VerticalType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,243 @@
+<#+ 
+	private enum UseComma
+	{
+		No,
+		Yes
+	}
+
+	private string GetRequestElement(MessageBase request)
+	{
+		return GetRequestElement(request, UseComma.No);
+	}
+
+	private string GetRequestElement(MessageBase request, UseComma useComma)
+	{
+		if (request != null)
+		{
+			string requestType = ResolveMessageContractNameAndAddProjectRef(request);
+			if (useComma == UseComma.Yes)
+			{
+				return requestType + " request, ";
+			}
+			else
+			{
+				return requestType + " request";
+			}
+		}
+		return "";
+	}
+
+	private string GetResponseElement(MessageBase response)
+	{
+		if (response != null)
+		{
+			return ResolveMessageContractNameAndAddProjectRef(response);
+		}
+		return "void";
+	}
+
+	private string GetImplementation(MessageBase response)
+	{
+		if(response != null)
+		{
+			return "return null;";
+		}
+		return string.Empty;
+	}
+
+	private string ResolveFaultTypeAndAddProjectReference(Fault fault)
+	{
+		if(fault is DataContractFault)
+		{
+			FaultContract faultDC = (FaultContract)ResolveModelReference(((DataContractFault)fault).Type);
+			WCFFaultContract wfcFaultDC = GetObjectExtender<WCFFaultContract>(faultDC);
+			if (wfcFaultDC == null)
+			{
+				return faultDC.Name;
+			}
+			if (!IsValid(wfcFaultDC.ArtifactLink))
+			{
+				LogError(String.Format(
+					CultureInfo.CurrentCulture,
+					"Cannot resolve reference in element {0}, genereated code may not compile",
+					faultDC.Name));
+				return faultDC.Name;
+			}
+			else
+			{
+				AddProjectReference(wfcFaultDC.ArtifactLink);
+				return wfcFaultDC.ArtifactLink.Namespace + "." + faultDC.Name;
+			}
+		}
+
+		// XsdElementFault 
+		string elementMoniker = ((XsdElementFault)fault).Element;
+		XmlSchemaElementMoniker uri = new XmlSchemaElementMoniker(elementMoniker);
+		WCFXsdElementFault xsdFault = GetObjectExtender<WCFXsdElementFault>(fault);
+		if (xsdFault == null)
+		{
+			return uri.ElementName;
+		}
+		if (!IsValid(xsdFault.ArtifactLink))
+		{
+			LogError(String.Format(
+				CultureInfo.CurrentCulture,
+				"Cannot resolve reference {0}, genereated code may not compile",
+				elementMoniker));
+			return uri.ElementName;
+		}
+		else
+		{
+			AddProjectReference(xsdFault.ArtifactLink);
+			return xsdFault.ArtifactLink.Namespace + "." + uri.ElementName;		
+		}
+	}
+
+	private string ResolveTypeAndAddProjectReference(ModelBusReference mbr)
+	{
+		DataContractBase dce = (DataContractBase)ResolveModelReference(mbr);
+		Microsoft.Practices.Modeling.CodeGeneration.Artifacts.ArtifactLink alink = GetArtifactLink(dce);
+		AddProjectReference((Microsoft.Practices.Modeling.CodeGeneration.Artifacts.IArtifactLink)alink);
+		return alink.Namespace + "." + dce.Name;
+	}
+	
+	private string ResolveXsdMessageElementAndAddProjectRef(MessageBase message)
+	{
+		WCFXsdMessageContract wfcXsdMc = GetObjectExtender<WCFXsdMessageContract>(message);
+		if (wfcXsdMc == null)
+		{
+			return message.Name;
+		}
+		XmlSchemaElementMoniker uri = new XmlSchemaElementMoniker(((XsdMessage)message).Element);
+		AddProjectReference(wfcXsdMc.XsdMessageContractElementArtifactLink);
+		return wfcXsdMc.XsdMessageContractElementArtifactLink.Namespace + "." + uri.ElementName;					
+	}
+	
+	private string ResolveMessageContractNameAndAddProjectRef(MessageBase message)
+	{
+		WCFMessageContract wfcMc = GetObjectExtender<WCFMessageContract>(message);
+		if (wfcMc == null)
+		{
+			WCFXsdMessageContract wfcXsdMc = GetObjectExtender<WCFXsdMessageContract>(message);
+			if (wfcXsdMc == null)
+			{
+				return message.Name;
+			}
+			AddProjectReference(wfcXsdMc.ArtifactLink);
+			return wfcXsdMc.ArtifactLink.Namespace + "." + message.Name;					
+		}
+		
+		// Add a Data Contract reference if needed
+		foreach(MessagePart mp in message.MessageParts)
+		{
+			if(mp is DataContractMessagePart)
+			{
+				ResolveTypeAndAddProjectReference(((DataContractMessagePart)mp).Type);
+				break;
+			}
+		}			
+		AddProjectReference(wfcMc.ArtifactLink);
+		return wfcMc.ArtifactLink.Namespace + "." + message.Name;
+	}
+	
+	private string ResolveXmlSerializerFormatAttribute()
+	{
+		if (HasXmlSerializer())
+		{
+			return "\r\n\t[WCF::XmlSerializerFormat]";
+		}
+		return "";
+	}	
+	
+	private string ResolveXmlElementAttribute()
+	{
+		if (HasXmlSerializer())
+		{
+			return "\r\n\t\t[System.Xml.Serialization.XmlElementAttribute]";
+		}
+		return "";	
+	}
+	
+	private string ResolveXmlElementAttribute(MessagePart part)
+	{
+		if (HasXmlSerializer())
+		{
+			PrimitiveMessagePart primitive = part as PrimitiveMessagePart;
+			if(primitive != null && primitive.IsCollection)
+			{
+				return "\r\n\t\t[System.Xml.Serialization.XmlArrayItem]";
+			} 
+			else
+			{
+				return "\r\n\t\t[System.Xml.Serialization.XmlElementAttribute]";
+			}
+		}
+		return "";	
+	}
+		
+	private bool HasXmlSerializer()
+	{
+		if(CurrentElement.ServiceContractModel.SerializerType == Microsoft.Practices.ServiceFactory.ServiceContracts.SerializerType.XmlSerializer)
+		{
+			return true;
+		}
+		return false;
+	}	
+		
+	private void PrintAttributeArguments(IDictionary<string, string> args)
+	{
+		if (args.Count > 0)
+		{
+			Write("(");
+			bool first = true;
+			foreach (KeyValuePair<string, string> arg in args)
+			{
+				if (!first)
+				{
+					Write(", ");
+				}
+				first = false;
+				Write(string.Format("{0} = {1}", arg.Key, arg.Value));
+			}
+			Write(")");
+		}
+	}
+	
+	private IDictionary<string, string> GetMessageContractAttributeArguments(bool wrapped)
+	{
+		IDictionary<string, string> args = new Dictionary<string, string>();
+		if (wrapped)
+		{
+			if (!string.IsNullOrEmpty(CurrentElement.Name))
+			{
+				args.Add("WrapperName", string.Format("\"{0}\"", CurrentElement.Name));
+			}
+			if (!string.IsNullOrEmpty(CurrentElement.Namespace))
+			{
+				args.Add("WrapperNamespace", string.Format("\"{0}\"", CurrentElement.Namespace));
+			}
+		}
+		else
+		{
+			args.Add("IsWrapped", "false");
+		}
+		
+		return args;
+	}
+
+	private string AddRemarks(object element, string lineFormat)
+	{
+		return AddRemarks(element, lineFormat, false);
+	}
+
+	private string AddRemarks(object element, string lineFormat, bool applyAfter)
+	{
+	    System.Reflection.PropertyInfo info = element.GetType().GetProperty("Remarks");
+		if(info != null && !string.IsNullOrEmpty(info.GetValue(element, null) as String))
+		{
+			string fmt = applyAfter ? "/// <remarks>{1}</remarks>{0}" : "{0}/// <remarks>{1}</remarks>"; 
+			return string.Format(fmt, lineFormat, info.GetValue(element, null));
+		}
+		return string.Empty;
+	}
+#>

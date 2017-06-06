@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="HostDesignerSchema" targetNamespace="http://schemas.microsoft.com/dsltools/HostDesigner" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/HostDesigner" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- HostDesignerModel -->
+  <xsd:element name="hostDesignerModel" type="HostDesignerModel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="HostDesignerModel">
+    <xsd:annotation>
+      <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: HostDesignerModelHasHostApplications -->
+          <xsd:element name="hostApplications" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of HostDesignerModelHasHostApplications</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="hostDesignerModelHasHostApplications">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from HostDesignerModelHasHostApplications needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="hostApplication" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: HostDesignerModelHasClientApplications -->
+          <xsd:element name="clientApplications" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of HostDesignerModelHasClientApplications</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="hostDesignerModelHasClientApplications">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from HostDesignerModelHasClientApplications needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="clientApplication" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>This value is not used.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostDesignerModel Moniker -->
+  <xsd:element name="hostDesignerModelMoniker" type="HostDesignerModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="HostDesignerModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for HostDesignerModel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostApplication -->
+  <xsd:element name="hostApplication" type="HostApplication" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="HostApplication">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: HostApplicationHasServiceDescriptions -->
+          <xsd:element name="serviceDescriptions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of HostApplicationHasServiceDescriptions</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="hostApplicationHasServiceDescriptions">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from HostApplicationHasServiceDescriptions needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="serviceDescription" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" >
+          <xsd:annotation>
+            <xsd:documentation>An identifier for the host application.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImplementationProject -->
+        <xsd:attribute name="implementationProject" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The Visual Studio project that represents the host application.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImplementationTechnology -->
+        <xsd:attribute name="implementationTechnology" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Associates a platform technology (for example, ASMX or WCF) with the Visual Studio host project.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostApplication Moniker -->
+  <xsd:element name="hostApplicationMoniker" type="HostApplicationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="HostApplicationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for HostApplication instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceDescription -->
+  <xsd:element name="serviceDescription" abstract="true" type="ServiceDescription" substitutionGroup="extensibleModelElement" />
+  <xsd:complexType name="ServiceDescription" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ServiceDescriptionHasEndpoints -->
+          <xsd:element name="endpoints" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ServiceDescriptionHasEndpoints</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="serviceDescriptionHasEndpoints">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceDescriptionHasEndpoints needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="endpoint" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the service reference.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceDescription Moniker -->
+  <xsd:element name="serviceDescriptionMoniker" abstract="true" type="ServiceDescriptionMoniker" substitutionGroup="extensibleModelElementMoniker" />
+  <xsd:complexType name="ServiceDescriptionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceDescription instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceReference -->
+  <xsd:element name="serviceReference" type="ServiceReference" substitutionGroup="serviceDescription" />
+  <xsd:complexType name="ServiceReference">
+    <xsd:complexContent>
+      <xsd:extension base="ServiceDescription">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ServiceImplementationType -->
+        <xsd:attribute name="serviceImplementationType" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A cross-model reference to the associated service on the service contract model.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceReference Moniker -->
+  <xsd:element name="serviceReferenceMoniker" type="ServiceReferenceMoniker" substitutionGroup="serviceDescriptionMoniker" />
+  <xsd:complexType name="ServiceReferenceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceReference instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ServiceDescriptionMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Endpoint -->
+  <xsd:element name="endpoint" type="Endpoint" substitutionGroup="extensibleModelElement" />
+  <xsd:complexType name="Endpoint">
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Address -->
+        <xsd:attribute name="address" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>When used, this string value will be appended to the end of the address. This is useful when a service has more than one endpoint and each must have different bindings. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the endpoint.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Endpoint Moniker -->
+  <xsd:element name="endpointMoniker" type="EndpointMoniker" substitutionGroup="extensibleModelElementMoniker" />
+  <xsd:complexType name="EndpointMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Endpoint instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ExtensibleModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClientApplication -->
+  <xsd:element name="clientApplication" type="ClientApplication" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClientApplication">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClientApplicationHasProxies -->
+          <xsd:element name="proxies" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ClientApplicationHasProxies</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="clientApplicationHasProxies">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ClientApplicationHasProxies needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="proxy" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" >
+          <xsd:annotation>
+            <xsd:documentation>An identifier for the client application.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImplementationTechnology -->
+        <xsd:attribute name="implementationTechnology" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Associates a platform technology (for example, ASMX or WCF) with the Visual Studio client project.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImplementationProject -->
+        <xsd:attribute name="implementationProject" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The Visual Studio project that represents the host application.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClientApplication Moniker -->
+  <xsd:element name="clientApplicationMoniker" type="ClientApplicationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClientApplicationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClientApplication instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Proxy -->
+  <xsd:element name="proxy" type="Proxy" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Proxy">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ProxyReferencesEndpoint -->
+          <xsd:element name="endpoint" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of ProxyReferencesEndpoint</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="1" maxOccurs="1" >
+                  <xsd:element ref="proxyReferencesEndpoint">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ProxyReferencesEndpoint needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="endpointMoniker" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the proxy.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Proxy Moniker -->
+  <xsd:element name="proxyMoniker" type="ProxyMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ProxyMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Proxy instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExtensibleModelElement -->
+  <xsd:element name="extensibleModelElement" abstract="true" type="ExtensibleModelElement" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExtensibleModelElement" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExtensibleModelElement Moniker -->
+  <xsd:element name="extensibleModelElementMoniker" abstract="true" type="ExtensibleModelElementMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExtensibleModelElementMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExtensibleModelElement instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostDesignerModelHasHostApplications -->
+  <xsd:element name="hostDesignerModelHasHostApplications" abstract="true" type="HostDesignerModelHasHostApplications" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="HostDesignerModelHasHostApplications" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end HostApplication -->
+          <xsd:element ref="hostApplication" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostDesignerModelHasHostApplications Moniker -->
+  <xsd:element name="hostDesignerModelHasHostApplicationsMoniker" abstract="true" type="HostDesignerModelHasHostApplicationsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="HostDesignerModelHasHostApplicationsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for HostDesignerModelHasHostApplications instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostApplicationHasServiceDescriptions -->
+  <xsd:element name="hostApplicationHasServiceDescriptions" abstract="true" type="HostApplicationHasServiceDescriptions" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="HostApplicationHasServiceDescriptions" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ServiceDescription -->
+          <xsd:element ref="serviceDescription" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostApplicationHasServiceDescriptions Moniker -->
+  <xsd:element name="hostApplicationHasServiceDescriptionsMoniker" abstract="true" type="HostApplicationHasServiceDescriptionsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="HostApplicationHasServiceDescriptionsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for HostApplicationHasServiceDescriptions instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceDescriptionHasEndpoints -->
+  <xsd:element name="serviceDescriptionHasEndpoints" abstract="true" type="ServiceDescriptionHasEndpoints" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceDescriptionHasEndpoints" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Endpoint -->
+          <xsd:element ref="endpoint" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceDescriptionHasEndpoints Moniker -->
+  <xsd:element name="serviceDescriptionHasEndpointsMoniker" abstract="true" type="ServiceDescriptionHasEndpointsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceDescriptionHasEndpointsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceDescriptionHasEndpoints instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClientApplicationHasProxies -->
+  <xsd:element name="clientApplicationHasProxies" abstract="true" type="ClientApplicationHasProxies" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClientApplicationHasProxies" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Proxy -->
+          <xsd:element ref="proxy" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClientApplicationHasProxies Moniker -->
+  <xsd:element name="clientApplicationHasProxiesMoniker" abstract="true" type="ClientApplicationHasProxiesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClientApplicationHasProxiesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClientApplicationHasProxies instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProxyReferencesEndpoint -->
+  <xsd:element name="proxyReferencesEndpoint" abstract="true" type="ProxyReferencesEndpoint" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ProxyReferencesEndpoint" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Endpoint -->
+          <xsd:element ref="endpointMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ProxyReferencesEndpoint Moniker -->
+  <xsd:element name="proxyReferencesEndpointMoniker" abstract="true" type="ProxyReferencesEndpointMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ProxyReferencesEndpointMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ProxyReferencesEndpoint instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostDesignerModelHasClientApplications -->
+  <xsd:element name="hostDesignerModelHasClientApplications" abstract="true" type="HostDesignerModelHasClientApplications" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="HostDesignerModelHasClientApplications" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ClientApplication -->
+          <xsd:element ref="clientApplication" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- HostDesignerModelHasClientApplications Moniker -->
+  <xsd:element name="hostDesignerModelHasClientApplicationsMoniker" abstract="true" type="HostDesignerModelHasClientApplicationsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="HostDesignerModelHasClientApplicationsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for HostDesignerModelHasClientApplications instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum TransportType -->
+  <xsd:simpleType name="TransportType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Http"/>
+      <xsd:enumeration value="Msmq"/>
+      <xsd:enumeration value="Tcp"/>
+      <xsd:enumeration value="MemoryPipe"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>
+

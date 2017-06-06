@@ -1,0 +1,31 @@
+<#@ Template Language="C#" Inherits="Microsoft.Practices.Modeling.CodeGeneration.Strategies.TextTemplating.ModelingTextTransformation" #>
+<#@ Import Namespace="System" #>
+<#@ Import Namespace="Microsoft.Practices.ServiceFactory.ServiceContracts" #>
+<#@ Import Namespace="Microsoft.Practices.ServiceFactory.HostDesigner" #>
+<#@ Import Namespace="Microsoft.Practices.ServiceFactory.Extenders.HostDesigner.Asmx" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Modeling.Integration" #>
+<#@ Assembly Name="Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl" #>
+<#@ ModelInjector processor="ModelInjectorDirectiveProcessor" #>
+<#
+ServiceDescription desc = (ServiceDescription) CurrentElement;
+
+ServiceReference reference = (ServiceReference)desc;
+#>
+<%@ WebService Language="C#" Class="<#= ResolveTypeAndAddProjectReference(reference.ServiceImplementationType) #>" %>
+<#+
+	private string ResolveTypeAndAddProjectReference(ModelBusReference mbr)
+	{
+		Service service = (Service)ResolveModelReference(mbr);
+		if(service != null)
+		{
+			Microsoft.Practices.Modeling.CodeGeneration.Artifacts.ArtifactLink alink = GetArtifactLink(service);
+			AddProjectReference((Microsoft.Practices.Modeling.CodeGeneration.Artifacts.IArtifactLink)alink);
+			return alink.Namespace + "." + service.Name;
+		}
+		else
+		{
+			return "";
+		}
+	}
+#>

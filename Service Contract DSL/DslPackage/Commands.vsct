@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- -->
+  <!-- This file contains custom command definitions. -->
+  <!-- -->
+  <!-- NOTE: Each time commands are added or changed, the "version" parameter to the -->
+  <!-- ProvideMenuResource attribute in Shell\Package.tt should be incremented. -->
+  <!-- This causes Visual Studio to re-merge the menu definitions for the package. -->
+  <!-- Otherwise, changes won't take effect until the next time devenv /setup is run. -->
+  <!-- -->
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
+  <Extern href="virtkeys.h" />
+  <Extern href="DSLToolsCmdID.h" />
+  <Include href="GeneratedCode\GeneratedVsct.vsct" />
+  <!-- enabled to discover MEF extensions -->
+  <Include href="GeneratedCode\CommandExtensionVSCT.vsct" />
+  
+  <Commands package="guidPkg">
+    <Groups>
+      <Group guid="guidCmdSet" id="grpidDSLDiagramCommands" priority="0x1000">
+        <Parent guid="guidCmdSet" id="menuidContext" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidCmdSet" id="cmdAddNewContract" priority="0x0120" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_ADD_ITEMS" />
+        <Icon guid="guidCmdSet" id="bmpModel" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdAddNewContractCanonicalName&gt;</CanonicalName>
+          <ButtonText>New Service Contract...</ButtonText>
+          <CommandName>cmdAddNewServiceContact</CommandName>
+          <ToolTipText>Use this option add a new Service Contract model file to the selected project.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidCmdSet" id="cmdAutoLayout" priority="0x0100" type="Button">
+        <Parent guid="guidCmdSet" id="grpidDSLDiagramCommands" />
+        <Icon guid="guidOfficeIcon" id="702" />  <!--msotcidOrgChart-->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdAutoLayoutCanonicalName&gt;</CanonicalName>
+          <ButtonText>Auto layout model</ButtonText>
+          <ToolTipText>Use this option to set the model layout automatically.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidCmdSet" id="cmdGenerateCode" priority="0x1000" type="Button">
+        <Parent guid="guidCmdSet" id="grpidDSLDiagramCommands" />
+        <Icon guid="guidOfficeIcon" id="472" />  <!--msotcidModule-->
+        <Strings>
+          <CanonicalName>cmdGenerateCodeCanonicalName&gt;</CanonicalName>
+          <ButtonText>Generate Code</ButtonText>
+          <ToolTipText>Generates code from the selected element or model.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidCmdSet" id="cmdGenerateAllCode" priority="0x1001" type="Button">
+        <Parent guid="guidCmdSet" id="grpidDSLDiagramCommands" />
+        <Icon guid="guidOfficeIcon" id="473" /> <!--msotcidObjectBrowser-->
+        <Strings>
+          <CanonicalName>cmdGenerateAllCodeCanonicalName&gt;</CanonicalName>
+          <ButtonText>Generate All Code</ButtonText>
+          <ToolTipText>Generates code from the current mode and all referenced models.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidCmdSet" id="cmdViewGeneratedCode" priority="0x1002" type="Button">
+        <Parent guid="guidCmdSet" id="grpidDSLDiagramCommands" />
+        <Icon guid="guidOfficeIcon" id="1561" /> <!--msotcidViewVisualBasicCode-->
+        <Strings>
+          <CanonicalName>cmdViewGeneratedCodeCanonicalName&gt;</CanonicalName>
+          <ButtonText>View Generated Code</ButtonText>
+          <ToolTipText>View the generated code from the selected element.</ToolTipText>
+        </Strings>
+      </Button>
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="guidCmdSet" href="Resources\SC16.ico" usedList="bmpModel" />
+    </Bitmaps>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="guidCmdSet" value="{0cd5c408-18b5-4905-8e14-a58404247220}">
+      <!--Commands-->
+      <IDSymbol name="cmdAddNewContract" value="0x920" />
+      <IDSymbol name="cmdAutoLayout" value="0x930" />
+      <IDSymbol name="cmdGenerateCode" value="0x1000" />
+      <IDSymbol name="cmdGenerateAllCode" value="0x1001" />
+      <IDSymbol name="cmdViewGeneratedCode" value="0x1002" />
+      <!--Groups-->
+      <IDSymbol name="grpidDSLDiagramCommands" value="0x1010" />
+      <!--Bitmaps-->
+      <IDSymbol name="bmpModel" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

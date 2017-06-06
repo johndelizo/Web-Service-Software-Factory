@@ -1,0 +1,13 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://example.org/" xmlns="http://example.org/" elementFormDefault="qualified">
+	<xsd:element name="Direction" type="DirectionType"/>
+	<xsd:simpleType name="DirectionType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="EAST" />
+			<xsd:enumeration value="WEST" />
+			<xsd:enumeration value="NORTH" />
+			<xsd:enumeration value="SOUTH" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
+

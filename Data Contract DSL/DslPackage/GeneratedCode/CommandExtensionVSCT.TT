@@ -1,0 +1,8 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+<#
+	// CmdSet Guid must be defined before master template is included
+	// This Guid must be kept synchronized with the CommandSetId Guid in Constants.tt
+	Guid guidCmdSet = new Guid ("44157ffb-0ae0-44e4-858c-366754e3dcc9");
+	string menuidCommandsExtensionBaseId="0x4000";
+#>
+<#@ include file="DslPackage\CommandExtensionVSCT.tt" #>

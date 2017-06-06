@@ -1,0 +1,24 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Host</Name>
+		<Description>Host</Description>
+		<ProjectType>Web</ProjectType>
+		<ProjectSubType>CSharp</ProjectSubType>
+		<SortOrder>20</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>Host</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+		<EnableEditOfLocationField>true</EnableEditOfLocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4702"/>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion> 
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Host.webproj" ReplaceParameters="false">
+			<Folder Name="App_Code" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="web.config">web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="vwd.webinfo">vwd.webinfo</ProjectItem>
+		</Project>
+	</TemplateContent>
+</VSTemplate>

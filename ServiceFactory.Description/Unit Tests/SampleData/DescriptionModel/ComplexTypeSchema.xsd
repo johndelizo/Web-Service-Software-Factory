@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ComplexTypeSchema" targetNamespace="http://tempuri.org/ComplexTypeSchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/ComplexTypeSchema.xsd" xmlns:mstns="http://tempuri.org/ComplexTypeSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="element1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ComplexData" type="complexType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="complexType">
+		<xs:simpleContent>
+			<xs:extension base="xs:int">
+				<xs:attribute name="Data" type="xs:string" />
+				<xs:attribute name="BoolData" type="xs:boolean" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

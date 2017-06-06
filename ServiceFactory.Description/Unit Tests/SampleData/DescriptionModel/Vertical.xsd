@@ -1,0 +1,22 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.company.org"
+            xmlns="http://www.company.org"
+            elementFormDefault="qualified"
+            xmlns:per="http://www.person.org"
+            xmlns:pro="http://www.product.org">
+  <xsd:import namespace="http://www.person.org"
+                schemaLocation="Person.xsd"/>
+  <xsd:import namespace="http://www.product.org"
+                schemaLocation="Product.xsd"/>
+
+  <xsd:element name="VerticalType" type="VerticalType"/>
+  <xsd:complexType name="VerticalType">
+    <xsd:sequence>
+      <xsd:element name="Person" type="per:PersonType"
+                           maxOccurs="1"/>
+      <xsd:element name="Product" type="pro:ProductType"
+                           maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

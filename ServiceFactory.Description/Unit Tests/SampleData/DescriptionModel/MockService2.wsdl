@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" 
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+                  xmlns:tns="http://mockService2.com/services/vendorservices" 
+                  xmlns:s="http://www.w3.org/2001/XMLSchema" 
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+                  targetNamespace="http://mockService2.com/services/vendorservices"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+									xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" >
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mockService2.com/services/vendorservices">
+      <s:complexType name="BillingDetails">
+        <s:sequence>
+          <s:element name="ContractId" type="s:int" minOccurs="0" nillable="true" />
+          <s:element name="PONumber" type="s:int" minOccurs="0" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PartAvailabilityRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="PartNumber" type="s:string" minOccurs="0" nillable="true" />
+            <s:element name="Quantity" type="s:integer" minOccurs="0" nillable="true" />
+            <s:element name="BillingInformation" type="tns:BillingDetails" minOccurs="0" nillable="true" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PartAvailabilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="LatestShipDate" type="s:date" minOccurs="0" nillable="true" />
+            <s:element name="OrderTotal" type="s:decimal" minOccurs="0" nillable="true" />
+            <s:element name="ShippingTotal" type="s:decimal" minOccurs="0" nillable="true" />
+            <s:element name="RushDeliveryAmount" type="s:decimal" minOccurs="0" nillable="true" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+			<s:complexType name="MyFaultContract">
+			 <s:sequence>
+					<s:element minOccurs="0" name="FaultDescription" nillable="true" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="MyFaultContract" nillable="true" type="tns:MyFaultContract" />
+		</s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAvailabilityIn">
+    <wsdl:part name="parameters" element="tns:PartAvailabilityRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailabilityOut">
+    <wsdl:part name="parameters" element="tns:PartAvailabilityResponse" />
+  </wsdl:message>
+	<wsdl:message name="MyFaultContractFault_FaultMessage">
+		<wsdl:part name="detail" element="tns:MyFaultContract" />
+	</wsdl:message>
+  <wsdl:portType name="IVendorGatewayService">
+    <wsdl:operation name="GetPartAvailability">
+      <wsdl:input message="tns:GetAvailabilityIn" />
+      <wsdl:output message="tns:GetAvailabilityOut" />
+			<wsdl:fault message="tns:MyFaultContractFault_FaultMessage" wsaw:Action="http://Coho.ClubServices.Membership.ServiceContracts/2007/01/IClubMembershipService/RegisterNewMemberMyFaultContractFault"	name="MyFaultContractFault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VendorGatewayService" type="tns:IVendorGatewayService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPartAvailability">
+      <soap:operation soapAction="http://mockService2.com/services/vendorservices/GetPartAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+			<wsdl:fault name="MyFaultContractFault">
+				<soap:fault name="MyFaultContractFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VendorGatewayService">
+    <wsdl:port name="VendorGatewayService" binding="tns:VendorGatewayService">
+      <soap:address location="http://localhost:9773/mockService2.ScmServices.Host/VendorGatewayService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

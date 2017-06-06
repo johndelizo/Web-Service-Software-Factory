@@ -1,0 +1,939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerDomainModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesigner</value>
+    <comment>Description for DslLibrary &apos;HostDesigner&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerDomainModel.DisplayName" xml:space="preserve">
+    <value>HostDesigner</value>
+    <comment>DisplayName for DslLibrary &apos;HostDesigner&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModel.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;HostDesignerModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModel.DisplayName" xml:space="preserve">
+    <value>Host Model</value>
+    <comment>DisplayName for DomainClass &apos;HostDesignerModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModel/Namespace.Description" xml:space="preserve">
+    <value>This value is not used.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;HostDesignerModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModel/Namespace.DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;HostDesignerModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModel/Namespace.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;HostDesignerModel&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication</value>
+    <comment>Description for DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication.DisplayName" xml:space="preserve">
+    <value>Host Application</value>
+    <comment>DisplayName for DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/Name.Description" xml:space="preserve">
+    <value>An identifier for the host application.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/ImplementationProject.Description" xml:space="preserve">
+    <value>The Visual Studio project that represents the host application.</value>
+    <comment>Description for DomainProperty &apos;ImplementationProject&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/ImplementationProject.DisplayName" xml:space="preserve">
+    <value>Implementation Project</value>
+    <comment>DisplayName for DomainProperty &apos;ImplementationProject&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/ImplementationProject.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ImplementationProject&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/ImplementationTechnology.Description" xml:space="preserve">
+    <value>Associates a platform technology (for example, ASMX or WCF) with the Visual Studio host project.</value>
+    <comment>Description for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/ImplementationTechnology.DisplayName" xml:space="preserve">
+    <value>Implementation Technology</value>
+    <comment>DisplayName for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplication/ImplementationTechnology.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;HostApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescription.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescription</value>
+    <comment>Description for DomainClass &apos;ServiceDescription&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescription.DisplayName" xml:space="preserve">
+    <value>Service Description</value>
+    <comment>DisplayName for DomainClass &apos;ServiceDescription&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescription/Name.Description" xml:space="preserve">
+    <value>The name of the service reference.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceDescription&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescription/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceDescription&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescription/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceDescription&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceReference.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceReference</value>
+    <comment>Description for DomainClass &apos;ServiceReference&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceReference.DisplayName" xml:space="preserve">
+    <value>Service Reference</value>
+    <comment>DisplayName for DomainClass &apos;ServiceReference&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceReference/ServiceImplementationType.Description" xml:space="preserve">
+    <value>A cross-model reference to the associated service on the service contract model.</value>
+    <comment>Description for DomainProperty &apos;ServiceImplementationType&apos; on DomainClass &apos;ServiceReference&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceReference/ServiceImplementationType.DisplayName" xml:space="preserve">
+    <value>Service Implementation Type</value>
+    <comment>DisplayName for DomainProperty &apos;ServiceImplementationType&apos; on DomainClass &apos;ServiceReference&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceReference/ServiceImplementationType.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ServiceImplementationType&apos; on DomainClass &apos;ServiceReference&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint</value>
+    <comment>Description for DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint.DisplayName" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>DisplayName for DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint/Address.Description" xml:space="preserve">
+    <value>When used, this string value will be appended to the end of the address. This is useful when a service has more than one endpoint and each must have different bindings. </value>
+    <comment>Description for DomainProperty &apos;Address&apos; on DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint/Address.DisplayName" xml:space="preserve">
+    <value>Address</value>
+    <comment>DisplayName for DomainProperty &apos;Address&apos; on DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint/Address.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Address&apos; on DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint/Name.Description" xml:space="preserve">
+    <value>The name of the endpoint.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Endpoint/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;Endpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication</value>
+    <comment>Description for DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication.DisplayName" xml:space="preserve">
+    <value>Client Application</value>
+    <comment>DisplayName for DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/Name.Description" xml:space="preserve">
+    <value>An identifier for the client application.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/ImplementationTechnology.Description" xml:space="preserve">
+    <value>Associates a platform technology (for example, ASMX or WCF) with the Visual Studio client project.</value>
+    <comment>Description for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/ImplementationTechnology.DisplayName" xml:space="preserve">
+    <value>Implementation Technology</value>
+    <comment>DisplayName for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/ImplementationTechnology.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ImplementationTechnology&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/ImplementationProject.Description" xml:space="preserve">
+    <value>The Visual Studio project that represents the host application.</value>
+    <comment>Description for DomainProperty &apos;ImplementationProject&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/ImplementationProject.DisplayName" xml:space="preserve">
+    <value>Implementation Project</value>
+    <comment>DisplayName for DomainProperty &apos;ImplementationProject&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplication/ImplementationProject.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ImplementationProject&apos; on DomainClass &apos;ClientApplication&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Proxy.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.Proxy</value>
+    <comment>Description for DomainClass &apos;Proxy&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Proxy.DisplayName" xml:space="preserve">
+    <value>Proxy</value>
+    <comment>DisplayName for DomainClass &apos;Proxy&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Proxy/Name.Description" xml:space="preserve">
+    <value>The name of the proxy.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Proxy&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Proxy/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Proxy&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.Proxy/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;Proxy&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement</value>
+    <comment>Description for DomainClass &apos;ExtensibleModelElement&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement.DisplayName" xml:space="preserve">
+    <value>Extensible Model Element</value>
+    <comment>DisplayName for DomainClass &apos;ExtensibleModelElement&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement/ObjectExtenderContainer.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement.Object Extender Container</value>
+    <comment>Description for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;ExtensibleModelElement&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement/ObjectExtenderContainer.DisplayName" xml:space="preserve">
+    <value>Object Extender Container</value>
+    <comment>DisplayName for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;ExtensibleModelElement&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ExtensibleModelElement/ObjectExtenderContainer.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ObjectExtenderContainer&apos; on DomainClass &apos;ExtensibleModelElement&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications</value>
+    <comment>Description for DomainClass &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications.DisplayName" xml:space="preserve">
+    <value>Host Model Has Host Applications</value>
+    <comment>DisplayName for DomainClass &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostDesignerModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications.HostDesignerModel</value>
+    <comment>Description for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostDesignerModel.DisplayName" xml:space="preserve">
+    <value>Host Model</value>
+    <comment>DisplayName for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostDesignerModel.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostDesignerModel.PropertyDisplayName" xml:space="preserve">
+    <value>Host Applications</value>
+    <comment>PropertyDisplayName for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostApplication.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications.HostApplication</value>
+    <comment>Description for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostApplication.DisplayName" xml:space="preserve">
+    <value>Host Application</value>
+    <comment>DisplayName for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostApplication.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasHostApplications/HostApplication.PropertyDisplayName" xml:space="preserve">
+    <value>Host Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostDesignerModelHasHostApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions</value>
+    <comment>Description for DomainClass &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions.DisplayName" xml:space="preserve">
+    <value>Host Application Has Service Descriptions</value>
+    <comment>DisplayName for DomainClass &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/HostApplication.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions.HostApplication</value>
+    <comment>Description for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/HostApplication.DisplayName" xml:space="preserve">
+    <value>Host Application</value>
+    <comment>DisplayName for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/HostApplication.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/HostApplication.PropertyDisplayName" xml:space="preserve">
+    <value>Service Descriptions</value>
+    <comment>PropertyDisplayName for DomainRole &apos;HostApplication&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/ServiceDescription.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions.ServiceDescription</value>
+    <comment>Description for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/ServiceDescription.DisplayName" xml:space="preserve">
+    <value>Service Description</value>
+    <comment>DisplayName for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/ServiceDescription.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationHasServiceDescriptions/ServiceDescription.PropertyDisplayName" xml:space="preserve">
+    <value>Host Application</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;HostApplicationHasServiceDescriptions&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints</value>
+    <comment>Description for DomainClass &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints.DisplayName" xml:space="preserve">
+    <value>Service Description Has Endpoints</value>
+    <comment>DisplayName for DomainClass &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/ServiceDescription.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints.ServiceDescription</value>
+    <comment>Description for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/ServiceDescription.DisplayName" xml:space="preserve">
+    <value>Service Description</value>
+    <comment>DisplayName for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/ServiceDescription.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/ServiceDescription.PropertyDisplayName" xml:space="preserve">
+    <value>Endpoints</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceDescription&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/Endpoint.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints.Endpoint</value>
+    <comment>Description for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/Endpoint.DisplayName" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>DisplayName for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/Endpoint.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionHasEndpoints/Endpoint.PropertyDisplayName" xml:space="preserve">
+    <value>Service Description</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ServiceDescriptionHasEndpoints&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies</value>
+    <comment>Description for DomainClass &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies.DisplayName" xml:space="preserve">
+    <value>Client Application Has Proxies</value>
+    <comment>DisplayName for DomainClass &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/ClientApplication.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies.ClientApplication</value>
+    <comment>Description for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/ClientApplication.DisplayName" xml:space="preserve">
+    <value>Client Application</value>
+    <comment>DisplayName for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/ClientApplication.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/ClientApplication.PropertyDisplayName" xml:space="preserve">
+    <value>Proxies</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/Proxy.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies.Proxy</value>
+    <comment>Description for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/Proxy.DisplayName" xml:space="preserve">
+    <value>Proxy</value>
+    <comment>DisplayName for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/Proxy.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationHasProxies/Proxy.PropertyDisplayName" xml:space="preserve">
+    <value>Client Application</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ClientApplicationHasProxies&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint</value>
+    <comment>Description for DomainClass &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint.DisplayName" xml:space="preserve">
+    <value>Proxy References Endpoint</value>
+    <comment>DisplayName for DomainClass &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Proxy.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint.Proxy</value>
+    <comment>Description for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Proxy.DisplayName" xml:space="preserve">
+    <value>Proxy</value>
+    <comment>DisplayName for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Proxy.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Proxy.PropertyDisplayName" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Proxy&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Endpoint.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint.Endpoint</value>
+    <comment>Description for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Endpoint.DisplayName" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>DisplayName for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Endpoint.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyReferencesEndpoint/Endpoint.PropertyDisplayName" xml:space="preserve">
+    <value>Proxies</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Endpoint&apos; on DomainRelationship &apos;ProxyReferencesEndpoint&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications</value>
+    <comment>Description for DomainClass &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications.DisplayName" xml:space="preserve">
+    <value>Host Model Has Client Applications</value>
+    <comment>DisplayName for DomainClass &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/HostDesignerModel.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications.HostDesignerModel</value>
+    <comment>Description for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/HostDesignerModel.DisplayName" xml:space="preserve">
+    <value>Host Model</value>
+    <comment>DisplayName for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/HostDesignerModel.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/HostDesignerModel.PropertyDisplayName" xml:space="preserve">
+    <value>Client Applications</value>
+    <comment>PropertyDisplayName for DomainRole &apos;HostDesignerModel&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/ClientApplication.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications.ClientApplication</value>
+    <comment>Description for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/ClientApplication.DisplayName" xml:space="preserve">
+    <value>Client Application</value>
+    <comment>DisplayName for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/ClientApplication.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerModelHasClientApplications/ClientApplication.PropertyDisplayName" xml:space="preserve">
+    <value>Host Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClientApplication&apos; on DomainRelationship &apos;HostDesignerModelHasClientApplications&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/Http.DisplayName" xml:space="preserve">
+    <value>Http</value>
+    <comment>Display name for EnumerationLiteral &apos;Http&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/Http.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.TransportType.Http</value>
+    <comment>Description for EnumerationLiteral &apos;Http&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/Msmq.DisplayName" xml:space="preserve">
+    <value>Msmq</value>
+    <comment>Display name for EnumerationLiteral &apos;Msmq&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/Msmq.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.TransportType.Msmq</value>
+    <comment>Description for EnumerationLiteral &apos;Msmq&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/Tcp.DisplayName" xml:space="preserve">
+    <value>Tcp</value>
+    <comment>Display name for EnumerationLiteral &apos;Tcp&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/Tcp.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.TransportType.Tcp</value>
+    <comment>Description for EnumerationLiteral &apos;Tcp&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/MemoryPipe.DisplayName" xml:space="preserve">
+    <value>MemoryPipe</value>
+    <comment>Display name for EnumerationLiteral &apos;MemoryPipe&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.TransportType/MemoryPipe.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.TransportType.MemoryPipe</value>
+    <comment>Description for EnumerationLiteral &apos;MemoryPipe&apos; on DomainEnumeration &apos;TransportType&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationShape</value>
+    <comment>Description for DomainClass &apos;HostApplicationShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostApplicationShape.DisplayName" xml:space="preserve">
+    <value>Host Application Shape</value>
+    <comment>DisplayName for DomainClass &apos;HostApplicationShape&apos;</comment>
+  </data>
+  <data name="HostApplicationShapeTypeDefaultText" xml:space="preserve">
+    <value>Host Application</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.BaseGeometryShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.BaseGeometryShape</value>
+    <comment>Description for DomainClass &apos;BaseGeometryShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.BaseGeometryShape.DisplayName" xml:space="preserve">
+    <value>Base Geometry Shape</value>
+    <comment>DisplayName for DomainClass &apos;BaseGeometryShape&apos;</comment>
+  </data>
+  <data name="BaseGeometryShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionShape</value>
+    <comment>Description for DomainClass &apos;ServiceDescriptionShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceDescriptionShape.DisplayName" xml:space="preserve">
+    <value>Service Description Shape</value>
+    <comment>DisplayName for DomainClass &apos;ServiceDescriptionShape&apos;</comment>
+  </data>
+  <data name="ServiceDescriptionShapeTypeDefaultText" xml:space="preserve">
+    <value>Service Reference</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.EndpointPortShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.EndpointPortShape</value>
+    <comment>Description for DomainClass &apos;EndpointPortShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.EndpointPortShape.DisplayName" xml:space="preserve">
+    <value>Endpoint Port Shape</value>
+    <comment>DisplayName for DomainClass &apos;EndpointPortShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyPortShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ProxyPortShape</value>
+    <comment>Description for DomainClass &apos;ProxyPortShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyPortShape.DisplayName" xml:space="preserve">
+    <value>Proxy Port Shape</value>
+    <comment>DisplayName for DomainClass &apos;ProxyPortShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationShape.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationShape</value>
+    <comment>Description for DomainClass &apos;ClientApplicationShape&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationShape.DisplayName" xml:space="preserve">
+    <value>Cilent Application Shape</value>
+    <comment>DisplayName for DomainClass &apos;ClientApplicationShape&apos;</comment>
+  </data>
+  <data name="ClientApplicationShapeTypeDefaultText" xml:space="preserve">
+    <value>Client Application</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceConnector.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ServiceConnector</value>
+    <comment>Description for DomainClass &apos;ServiceConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ServiceConnector.DisplayName" xml:space="preserve">
+    <value>Service Connector</value>
+    <comment>DisplayName for DomainClass &apos;ServiceConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyEndpointConnector.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.ProxyEndpointConnector</value>
+    <comment>Description for DomainClass &apos;ProxyEndpointConnector&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.ProxyEndpointConnector.DisplayName" xml:space="preserve">
+    <value>Proxy Endpoint Connector</value>
+    <comment>DisplayName for DomainClass &apos;ProxyEndpointConnector&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>HostDesigner (*.host)|*.host</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>Host Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerDiagram.Description" xml:space="preserve">
+    <value>Description for Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerDiagram</value>
+    <comment>Description for DomainClass &apos;HostDesignerDiagram&apos;</comment>
+  </data>
+  <data name="Microsoft.Practices.ServiceFactory.HostDesigner.HostDesignerDiagram.DisplayName" xml:space="preserve">
+    <value>Host Designer Diagram</value>
+    <comment>DisplayName for DomainClass &apos;HostDesignerDiagram&apos;</comment>
+  </data>
+  <data name="Host ToolsToolboxTab" xml:space="preserve">
+    <value>Host Tools</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="HostApplicationToolboxItem" xml:space="preserve">
+    <value>Host Application</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="HostApplicationToolboxTooltip" xml:space="preserve">
+    <value>Represents the application that will accept request messages and send response messages.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ServiceToolboxItem" xml:space="preserve">
+    <value>Service Reference</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ServiceToolboxTooltip" xml:space="preserve">
+    <value>Associates the service implementation shape from the service contract designer with the application that will host the service. To add the service reference to the design surface, drag the Service Reference shape from the Toolbox and drop it on the Host Application shape. In the Properties window for the Service Reference shape, use the Service Implementation Type property to associate the service implementation on the Service Contract Model.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EndpointToolboxItem" xml:space="preserve">
+    <value>Endpoint</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EndpointToolboxTooltip" xml:space="preserve">
+    <value>Describes in a standard-based way where messages should be sent, how they should be sent, and what the messages should look like.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ClientApplicationToolboxItem" xml:space="preserve">
+    <value>Client Application</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ClientApplicationToolboxTooltip" xml:space="preserve">
+    <value>Represents the application that consumes the service.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ProxyToolboxItem" xml:space="preserve">
+    <value>Proxy</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ProxyToolboxTooltip" xml:space="preserve">
+    <value>Represents the part of the client application that consumes the service. To add the proxy to the client application, drag the Proxy shape from the Toolbox and drop it onto the Client Application shape.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ProxyEndpointConnectionToolToolboxItem" xml:space="preserve">
+    <value>Proxy Endpoint Connector</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ProxyEndpointConnectionToolToolboxTooltip" xml:space="preserve">
+    <value>Associates the proxy on the Client Application with the Endpoint shape on the Service Reference.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HostApplicationShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\HostApplication.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ServiceDescriptionShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceImplementation.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="EndpointPortShapeImageDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceEndpointPortIcon.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ProxyPortShapeImageDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ProxyEndpointShape.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ClientApplicationShapeTypeIconDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ClientApplication.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="HostApplicationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\HostApplication.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceImplementation.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EndpointToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ServiceEndpointPortIcon.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ClientApplicationToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ClientApplication.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ProxyToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ProxyEndpointShape.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ProxyEndpointConnectionToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ProxyEndpointConnection.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

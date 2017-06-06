@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProjectMappingInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FileName="ProjectMapping.xml" xmlns="http://schemas.microsoft.com/pag/project-mapping">
+  <ProjectMappingTables>
+    <ProjectMappingTable Name="WCF">
+      <ProjectMappings>
+        <ProjectMapping ProjectId="4A216B22-B2B2-4851-AFFA-B7A5AF147645" ProjectPath="\">
+          <Roles>
+            <Role Name="DataContractRole"/>
+            <Role Name="ServiceContractRole"/>
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="DE91F8D4-0BB1-4768-ACF3-204ABB481AFD" ProjectPath="\">
+          <Roles>
+            <Role Name="DataContractRole"/>
+            <Role Name="HostRole"/>
+          </Roles>
+        </ProjectMapping>
+        <ProjectMapping ProjectId="17D2049C-AFA7-42f9-81D6-BC5C50388A5F" ProjectPath="\">
+          <Roles>
+            <Role Name="HostRole"/>
+          </Roles>
+        </ProjectMapping>        
+        <ProjectMapping ProjectId="BC9E7634-206C-43f4-81F3-5CA0D6DDBA99" ProjectPath="\">
+          <Roles>
+            <Role Name="MessageContractRole"/>
+          </Roles>
+        </ProjectMapping>
+      </ProjectMappings>
+    </ProjectMappingTable>
+    <ProjectMappingTable Name="ASMX">
+      <ProjectMappings>
+        <ProjectMapping ProjectId="A168E8C3-8CCD-47cd-AE2B-BE0F85F66781" ProjectPath="\">
+          <Roles>
+            <Role Name="DataContractRole"/>
+          </Roles>
+        </ProjectMapping>
+      </ProjectMappings>
+    </ProjectMappingTable>
+  </ProjectMappingTables>
+</ProjectMappingInformation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SimpleSchema" targetNamespace="http://tempuri.org/SimpleSchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/SimpleSchema.xsd" xmlns:mstns="http://tempuri.org/SimpleSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="element1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Data1" type="xs:string" />
+				<xs:element name="Data2" type="complexType1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="element2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Info1" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="complexType1">
+		<xs:sequence>
+			<xs:element name="Type1" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

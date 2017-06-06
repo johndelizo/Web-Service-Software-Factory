@@ -1,0 +1,19 @@
+﻿<#+
+
+	private string AddRemarks(ExtensibleModelElement element, string lineFormat)
+	{
+		if(!string.IsNullOrEmpty(element.Remarks))
+		{
+			return string.Format("{0}/// <remarks>{1}</remarks>", lineFormat, element.Remarks);
+		}
+		return string.Empty;
+	}
+
+	private string ResolveTypeAndAddProjectReference(ModelBusReference mbr)
+	{
+		DataContractBase dce = (DataContractBase)ResolveModelReference(mbr);
+		Microsoft.Practices.Modeling.CodeGeneration.Artifacts.ArtifactLink alink = GetArtifactLink(dce);
+		AddProjectReference((Microsoft.Practices.Modeling.CodeGeneration.Artifacts.IArtifactLink)alink);
+		return alink.Namespace + "." + dce.Name;
+	}
+#>

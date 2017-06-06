@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+  <!--  The VSCT compiler (the tool that translates this file into the binary 
+        format that VisualStudio will consume) has the ability to run a preprocessor 
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so 
+        it is possible to define includes and macros with the same syntax used 
+        in C++ files. Using this ability of the compiler here, we include some files 
+        defining some of the constants that we will use inside the file. -->
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h" />
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h" />
+  <!-- menu Ids in file: C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Inc\vsshlids.h -->
+  <!--Definition of some VSCT specific constants. In this sample we use it for the IDs inside the guidOfficeIcon group. -->
+  <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
+  <!-- icons labels in file: C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Inc\office10\msobtnid.h -->
+
+  <!--The Commands section is where we the commands, menus and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+  <Commands package="guidServiceFactory_PackagePkg">
+    <!-- Inside this section we have different sub-sections: one for the menus, another  
+    for the menu groups, one for the buttons (the actual commands), one for the combos 
+    and the last one for the bitmaps used. Each element is identified by a command id that  
+    is a unique pair of guid and numeric identifier; the guid part of the identifier is usually  
+    called "command set" and is used to group different command inside a logically related  
+    group; your package should define its own command set in order to avoid collisions  
+    with command ids defined by other packages. -->
+
+    
+    <!-- In this section you can define new menu groups. A menu group is a container for 
+         other menus or buttons (commands); from a visual point of view you can see the 
+         group as the part of a menu contained between two lines. The parent of a group 
+         must be a menu. -->
+    <!--<Groups>
+    </Groups>-->
+    
+    <!--Buttons section. -->
+    <!--This section defines the elements the user can interact with, like a menu command or a button 
+        or combo box in a toolbar. -->
+    <Buttons>
+      <Button guid="guidServiceFactory_PackageCmdSet" id="cmdAddNewAsmxProject" priority="0x1" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_ADD_ITEM" />
+        <Icon guid="guidBitmapAsmx" id="bmpAsmx" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdAddNewAsmxProjectCanonicalName&gt;</CanonicalName>
+          <ButtonText>New Service Factory ASMX Service ...</ButtonText>
+          <ToolTipText>Creates All The Projects for a ASMX Service.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidServiceFactory_PackageCmdSet" id="cmdAddNewWcfProject" priority="0x2" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_ADD_ITEM" />
+        <Icon guid="guidBitmapWcf" id="bmpWcf" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdAddNewWcfProjectCanonicalName&gt;</CanonicalName>
+          <ButtonText>New Service Factory WCF Service ...</ButtonText>
+          <ToolTipText>Creates All The Projects for a WCF Service.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidServiceFactory_PackageCmdSet" id="cmdAddPmt" priority="0x3" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SLNFLDR_BUILD" />
+        <Icon guid="guidOfficeIcon" id="183" /> <!--msotcidFindInTable-->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdAddPmtCanonicalName&gt;</CanonicalName>
+          <ButtonText>Populate Project Mapping Table</ButtonText>
+          <ToolTipText>Populates a Project Mapping Table with all the projects in the current solution folder.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidServiceFactory_PackageCmdSet" id="cmdSemanticCA" priority="0x300" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_BUILD" /> <!-- IDG_VS_CLEAN_CASCADE -->
+        <Icon guid="guidOfficeIcon" id="5687" /> <!--msotcidFormulaEvaluator-->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdSemanticCACanonicalName&gt;</CanonicalName>
+          <ButtonText>Run WCF Semantic Code Analysis</ButtonText>
+          <ToolTipText>Performs semantic code analysis rules for Windows Communication Foundation code and configuration files.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidServiceFactory_PackageCmdSet" id="cmdSecurityCA" priority="0x301" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_BUILD" />
+        <!-- IDG_VS_CLEAN_CASCADE -->
+        <Icon guid="guidOfficeIcon" id="5687" /> <!--msotcidFormulaEvaluator-->
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>TextChangesButton</CommandFlag>
+        <Strings>
+          <CanonicalName>cmdSecurityCACanonicalName&gt;</CanonicalName>
+          <ButtonText>Run WCF Security Code Analysis</ButtonText>
+          <ToolTipText>Performs security code analysis rules for Windows Communication Foundation code and configuration files.</ToolTipText>
+        </Strings>
+      </Button>
+    </Buttons>   
+    <Bitmaps> 
+      <Bitmap guid="guidBitmapWcf" href="Resources\WCF.ico" usedList="bmpWcf" />
+      <Bitmap guid="guidBitmapAsmx" href="Resources\ASMX.ico" usedList="bmpAsmx" />
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidServiceFactory_PackagePkg" value="{19bb3318-cdf8-44bc-b02b-5788104f8cf8}" />    
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidServiceFactory_PackageCmdSet" value="{8ef5eefd-70fa-4400-810f-219eb8ed968f}">
+      <IDSymbol name="cmdAddNewAsmxProject" value="0x1" />
+      <IDSymbol name="cmdAddNewWcfProject" value="0x2" />
+      <IDSymbol name="cmdAddPmt" value="0x3" />
+      <IDSymbol name="cmdSemanticCA" value="0x4" />
+      <IDSymbol name="cmdSecurityCA" value="0x5" />
+    </GuidSymbol>
+    <GuidSymbol name="guidBitmapWcf" value="{7F9761EF-88FF-4EC9-8278-1A61CBF405A9}">
+      <IDSymbol name="bmpWcf" value="1" />
+    </GuidSymbol>
+    <GuidSymbol name="guidBitmapAsmx" value="{D49E07F6-E854-493B-BD6D-7FD9BA368DA2}">
+      <IDSymbol name="bmpAsmx" value="1" />
+    </GuidSymbol>
+  </Symbols>
+
+</CommandTable>

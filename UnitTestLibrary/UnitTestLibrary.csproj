@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6386ACC0-EB76-4399-85D4-3830203FA649}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.UnitTestLibrary</RootNamespace>
+    <AssemblyName>Microsoft.Practices.UnitTestLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.GraphObject.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.10.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.SDK.Integration.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell.11.0" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+    <Reference Include="Microsoft.VisualStudio.Shell.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.11.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.11.0" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MockCodeModel.cs" />
+    <Compile Include="MockDictionaryService.cs" />
+    <Compile Include="MockDocData.cs" />
+    <Compile Include="MockDomainModel.cs" />
+    <Compile Include="MockEnvDTEProject.cs" />
+    <Compile Include="MockExtensionProvider.cs" />
+    <Compile Include="MockFileChangeEx.cs" />
+    <Compile Include="MockLocalRegistry.cs" />
+    <Compile Include="MockMappingServiceProvider.cs" />
+    <Compile Include="MockModelBus.cs" />
+    <Compile Include="MockModelBusAdapter.cs" />
+    <Compile Include="MockModelBusAdapterManager.cs" />
+    <Compile Include="MockModelBusReference.cs" />
+    <Compile Include="MockModelElement.cs" />
+    <Compile Include="MockProjectModel.cs" />
+    <Compile Include="MockServiceProvider.cs" />
+    <Compile Include="MockServiceProviderService.cs" />
+    <Compile Include="MockTypeResolutionService.cs" />
+    <Compile Include="MockVsHierarchy.cs" />
+    <Compile Include="MockVsRDT.cs" />
+    <Compile Include="MockVsSolution.cs" />
+    <Compile Include="MockVsTextManager.cs" />
+    <Compile Include="MockVsUIShellOpenDocument.cs" />
+    <Compile Include="MockVsWindowFrame.cs" />
+    <Compile Include="ModelFixture.cs" />
+    <Compile Include="ProjectMappingManagerSetup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnextendedMockModelElement.cs" />
+    <Compile Include="Utilities\AssemblyResourceResolver.cs" />
+    <Compile Include="Utilities\ConfigurationLoader.cs" />
+    <Compile Include="Utilities\DynamicCompilation.cs" />
+    <Compile Include="Utilities\SerializerUtilities.cs" />
+    <Compile Include="Utilities\TypeAsserter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modeling.CodeGeneration.Strategies\Source\Modeling.CodeGeneration.Strategies.csproj">
+      <Project>{94EDBE05-0BC5-48E8-A4C1-09FA426E61A9}</Project>
+      <Name>Modeling.CodeGeneration.Strategies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modeling.CodeGeneration\Source\Modeling.CodeGeneration.csproj">
+      <Project>{6FAB0833-E0ED-46DE-9F25-C4AB5519023F}</Project>
+      <Name>Modeling.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modeling.Common\Source\Modeling.Common.csproj">
+      <Project>{E3843D63-BDDD-458C-A495-DC13B234F728}</Project>
+      <Name>Modeling.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modeling.ExtensionProvider\Source\Modeling.ExtensionProvider.csproj">
+      <Project>{48226A63-A2F7-409A-B6DF-821D64AC0654}</Project>
+      <Name>Modeling.ExtensionProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceFactory.RecipeFramework.Extensions\Source\ServiceFactory.RecipeFramework.Extensions.csproj">
+      <Project>{C5A57DFA-C4A9-4FBD-BC02-C41FCB1996D3}</Project>
+      <Name>ServiceFactory.RecipeFramework.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VisualStudio.Helper\Source\VisualStudio.Helper.csproj">
+      <Project>{4F85748B-9DC5-49FD-AF44-EA32B30EE591}</Project>
+      <Name>VisualStudio.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

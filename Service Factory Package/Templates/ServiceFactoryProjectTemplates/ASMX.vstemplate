@@ -1,0 +1,39 @@
+﻿<VSTemplate 
+	Version="3.0.0" 
+	Type="ProjectGroup"
+	xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>WSSF ASMX Implementation Projects</Name>
+    <Description>Service Factory ASMX Implementation Projects</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>90</SortOrder>
+    <Icon>ASMX.ico</Icon>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ASMXService</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="Source">
+        <SolutionFolder Name="Business Logic">
+          <ProjectTemplateLink ProjectName="$safeprojectname$.BusinessEntities">ASMXBusinessEntity\BusinessEntity.vstemplate</ProjectTemplateLink>
+          <ProjectTemplateLink ProjectName="$safeprojectname$.BusinessLogic">ASMXBusinessLogic\BusinessLogic.vstemplate</ProjectTemplateLink>
+        </SolutionFolder>
+        <SolutionFolder Name="Resource Access">
+          <ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess">ASMXDataAccess\DataAccess.vstemplate</ProjectTemplateLink>
+        </SolutionFolder>
+        <SolutionFolder Name="Service Interface">
+          <ProjectTemplateLink ProjectName="$safeprojectname$.DataTypes">ASMXDataType\DataType.vstemplate</ProjectTemplateLink>
+          <ProjectTemplateLink ProjectName="$safeprojectname$.ServiceImplementation">ASMXServiceImplementation\ServiceImplementation.vstemplate</ProjectTemplateLink>
+          <ProjectTemplateLink ProjectName="$safeprojectname$.ServiceContracts">ASMXServiceContract\ServiceContract.vstemplate</ProjectTemplateLink>
+        </SolutionFolder>
+      </SolutionFolder>
+      <SolutionFolder Name="Tests">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Host">ASMXHost\Host.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Client">ASMXClient\Client.vstemplate</ProjectTemplateLink>
+        <SolutionFolder Name="Functional Tests"/>
+        <SolutionFolder Name="Unit Tests" />
+      </SolutionFolder>      
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

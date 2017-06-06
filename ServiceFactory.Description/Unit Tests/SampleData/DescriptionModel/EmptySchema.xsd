@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="EmptySchema"
+                  targetNamespace="http://tempuri.org/EmptySchema.xsd"
+                  elementFormDefault="qualified"
+                  xmlns="http://tempuri.org/EmptySchema.xsd"
+                  xmlns:mstns="http://tempuri.org/EmptySchema.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>

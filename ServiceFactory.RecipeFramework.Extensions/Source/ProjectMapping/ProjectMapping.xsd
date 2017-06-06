@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://schemas.microsoft.com/pag/project-mapping" xmlns:prjmp="http://schemas.microsoft.com/pag/project-mapping" version="1.0" targetNamespace="http://schemas.microsoft.com/pag/project-mapping">
+  <xs:simpleType name="GUID">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+	<xs:simpleType name="ServiceFactoryRoleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DataContractRole" />
+			<xs:enumeration value="FaultContractRole" />
+			<xs:enumeration value="MessageContractRole" />
+			<xs:enumeration value="ServiceContractRole" />
+			<xs:enumeration value="ServiceContractRole" />
+			<xs:enumeration value="BusinessEntityRole" />
+			<xs:enumeration value="BusinessLogicRole" />
+			<xs:enumeration value="ServiceRole" />
+			<xs:enumeration value="HostRole" />
+			<xs:enumeration value="ClientRole" />
+		</xs:restriction>
+	</xs:simpleType>
+  <xs:complexType name="Roles">
+    <xs:sequence>
+      <xs:element name="Role" type="Role" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Role">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="Name" type="ServiceFactoryRoleType" />
+  </xs:complexType>
+  <xs:complexType name="ProjectMapping">
+    <xs:sequence>
+      <xs:element name="Roles" type="Roles" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute type="GUID" name="ProjectId" />
+    <xs:attribute name="ProjectPath" type="NonEmptyString" />
+    <xs:attribute name="ProjectName" type="NonEmptyString" />
+  </xs:complexType>
+  <xs:complexType name="ProjectMappings">
+    <xs:sequence>
+      <xs:element name="ProjectMapping" type="ProjectMapping" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProjectMappingTable">
+    <xs:sequence>
+      <xs:element name="ProjectMappings" type="ProjectMappings" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="NonEmptyString" />
+  </xs:complexType>
+  <xs:element name="ProjectMappingInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ProjectMappingTables" type="ProjectMappingTables" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="FileName" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ProjectMappingTables">
+    <xs:sequence>
+      <xs:element name="ProjectMappingTable" type="ProjectMappingTable" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6786390A-0C56-40F9-9CF6-7C39D99AEDB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.ServiceFactory.Validation</RootNamespace>
+    <AssemblyName>Microsoft.Practices.ServiceFactory.Validation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Lib\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.SDK.Integration.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassHasDefaultConstructorValidator.cs" />
+    <Compile Include="ClientApplicationCollectionValidator.cs" />
+    <Compile Include="CollectionTypeValidator.cs" />
+    <Compile Include="ConfigurableObjectCollectionValidator.cs" />
+    <Compile Include="ConfigurableObjectValidator.cs" />
+    <Compile Include="ContractElementCollectionValidator.cs" />
+    <Compile Include="CircularRefereceModelValidator.cs" />
+    <Compile Include="SessionModeValidator.cs" />
+    <Compile Include="FaultElementUniqueContractCollectionValidator.cs" />
+    <Compile Include="ElementNameValidator.cs" />
+    <Compile Include="ModelNameValidator.cs" />
+    <Compile Include="NotEmptyMessagePartCollectionValidator.cs" />
+    <Compile Include="CrossDataContractModelTIandPMTValidator.cs" />
+    <Compile Include="CrossModelReferenceValidator.cs" />
+    <Compile Include="CrossServiceContractModelTIandPMTValidator.cs" />
+    <Compile Include="DataContractDataElementCollectionValidator.cs" />
+    <Compile Include="DataContractEnumDataElementCollectionValidator.cs" />
+    <Compile Include="EmptyAddressCollectionValidator.cs" />
+    <Compile Include="EndpointCollectionValidator.cs" />
+    <Compile Include="EndpointPropertyCollectionValidator.cs" />
+    <Compile Include="ExistingProjectValidator.cs" />
+    <Compile Include="ExtenderObjectValidator.cs" />
+    <Compile Include="FaultCollectionCrossModelValidator.cs" />
+    <Compile Include="FaultContractDataElementCollectionValidator.cs" />
+    <Compile Include="FaultElementCollectionValidator.cs" />
+    <Compile Include="FileExistsValidator.cs" />
+    <Compile Include="FileExtensionValidator.cs" />
+    <Compile Include="FileNameValidator.cs" />
+    <Compile Include="HostApplicationCollectionValidator.cs" />
+    <Compile Include="HostModelContainsUniqueProxyNamesAcrossClientsValidator.cs" />
+    <Compile Include="HostModelContainsUniqueServiceReferencesAcrossHostsValidator.cs" />
+    <Compile Include="IdentifierValidator.cs" />
+    <Compile Include="ImplementationTechnologyAndSerializerCrossModelValidator.cs" />
+    <Compile Include="ImplementationTechnologyAndSerializerValidator.cs" />
+    <Compile Include="IsWrappedValidator.cs" />
+    <Compile Include="LocationValidator.cs" />
+    <Compile Include="MessageContractElementCollectionValidator.cs" />
+    <Compile Include="MessagePartElementCollectionValidator.cs" />
+    <Compile Include="ModelElementCollectionValidator.cs" />
+    <Compile Include="NamespaceValidator.cs" />
+    <Compile Include="NonEmptyDataContractCollectionBaseCollectionTypeValidator.cs" />
+    <Compile Include="NonEmptyDataContractValidator.cs" />
+    <Compile Include="NonEmptyNamespaceValidator.cs" />
+    <Compile Include="NonEmptyStringValidator.cs" />
+    <Compile Include="NonRecursiveDataContractValidator.cs" />
+    <Compile Include="NotEmptyCollectionValidator.cs" />
+    <Compile Include="NotEmptyDataElementCollectionValidator.cs" />
+    <Compile Include="NotEmptyEndpointCollectionValidator.cs" />
+    <Compile Include="NotEmptyEnumDataElementCollectionValidator.cs" />
+    <Compile Include="NotEmptyOperationCollectionValidator.cs" />
+    <Compile Include="OnlyOneTrueValuePropertyCollectionValidator.cs" />
+    <Compile Include="OperationActionValidator.cs" />
+    <Compile Include="OperationElementCollectionValidator.cs" />
+    <Compile Include="OperationElementIsOneWayValidator.cs" />
+    <Compile Include="PredicateValidator.cs" />
+    <Compile Include="ProjectItemIsUniqueValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyCollectionValidator.cs" />
+    <Compile Include="ProxyCollectionValidator.cs" />
+    <Compile Include="Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceAndServiceImplementationTechnologyCrossModelValidator.cs" />
+    <Compile Include="ServiceContractElementCollectionValidator.cs" />
+    <Compile Include="ServiceDescriptionCollectionValidator.cs" />
+    <Compile Include="ServiceElementCollectionValidator.cs" />
+    <Compile Include="UniqueMessagePartsCollectionValidator.cs" />
+    <Compile Include="UniqueNamedElementCollectionValidator.cs" />
+    <Compile Include="UniqueOrderPropertyCollectionValidator.cs" />
+    <Compile Include="UniquePropertyCollectionValidator.cs" />
+    <Compile Include="UriNamespaceValidator.cs" />
+    <Compile Include="UriValidator.cs" />
+    <Compile Include="XsdElementFaultCollectionValidator.cs" />
+    <Compile Include="XsdElementValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data Contract DSL\Dsl\DataContractDsl.csproj">
+      <Project>{E31971C3-A635-43E8-BCA5-F2F5BAD0052B}</Project>
+      <Name>DataContractDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Host Designer DSL\Dsl\HostDesignerDsl.csproj">
+      <Project>{C235B0F0-B751-4673-9707-2BC114250EA2}</Project>
+      <Name>HostDesignerDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.CodeGeneration\Source\Modeling.CodeGeneration.csproj">
+      <Project>{6FAB0833-E0ED-46DE-9F25-C4AB5519023F}</Project>
+      <Name>Modeling.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.Common\Source\Modeling.Common.csproj">
+      <Project>{E3843D63-BDDD-458C-A495-DC13B234F728}</Project>
+      <Name>Modeling.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.Dsl.Integration\Source\Modeling.Dsl.Integration.csproj">
+      <Project>{B9DFBF89-80AD-4C22-A753-111770A0BE5A}</Project>
+      <Name>Modeling.Dsl.Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modeling.ExtensionProvider\Source\Modeling.ExtensionProvider.csproj">
+      <Project>{48226A63-A2F7-409A-B6DF-821D64AC0654}</Project>
+      <Name>Modeling.ExtensionProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Contract DSL\Dsl\ServiceContractDsl.csproj">
+      <Project>{3E9005DB-5EA1-4BEC-BEC2-3E0324395C73}</Project>
+      <Name>ServiceContractDsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceFactory.Description\Source\ServiceFactory.Description.csproj">
+      <Project>{63078F02-AD86-4481-95FE-F6AC859C68B6}</Project>
+      <Name>ServiceFactory.Description</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VisualStudio.Helper\Source\VisualStudio.Helper.csproj">
+      <Project>{4F85748B-9DC5-49FD-AF44-EA32B30EE591}</Project>
+      <Name>VisualStudio.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,18 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>MessageContracts</Name>
+    <Description>MessageContracts</Description>    
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>20</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>MessageContracts</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4547" />
+  </TemplateData>
+  <TemplateContent>
+    <Project File="MessageContract.csproj" ReplaceParameters="true">
+      <Folder Name="GeneratedCode" TargetFolderName="GeneratedCode" />
+      <ProjectItem ReplaceParameters="true">Properties\AssemblyInfo.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

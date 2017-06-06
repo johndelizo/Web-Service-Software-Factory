@@ -1,0 +1,190 @@
+﻿<Rules FriendlyName="WCF Security Rules">
+	<!--<Rule TypeName="CertificateValidationMode" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00001">
+		<Name>Review certificate validations for the client or service credentials</Name>
+		<Description>
+      Any usage of X.509 certificates for signing or encrypting is unsafe. 
+      An active attacker can generate valid test certificates, then for instance use these certificates to sign any message.
+    </Description>
+		<Url>http://msdn.microsoft.com/practices/</Url>
+		<Resolution>
+      Do not use the value {0} in production: set the attribute certificateValidationMode with a value like {1} in the serviceCertificate/authentication element or in clientCertificate/authentication element of the WCF configuration file.
+    </Resolution>
+		<Email></Email>
+		<MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+		<FixCategories>NonBreaking</FixCategories>
+		<Owner />
+	</Rule>
+	<Rule TypeName="CertificateRevocationMode" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00002">
+		<Name>Review certificate revocation checks for the client or service credentials</Name>
+		<Description>
+      The code does not prescribe checking that X.509 certificates have an issuer chain that extends to a trusted root authority; hence any usage of X.509 certificates for signing or encrypting fully trusts the current content of the local certificate store.
+    </Description>
+		<Url>http://msdn.microsoft.com/practices/</Url>
+		<Resolution>
+      Do not use the value X509RevocationMode.NoCheck in production. 
+      Set the attribute "revocationMode" with a value different from NoCheck in the client or service credentials.
+		</Resolution>
+		<Email></Email>
+		<MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+		<FixCategories>NonBreaking</FixCategories>
+		<Owner />
+	</Rule>-->
+	<Rule TypeName="ReviewProtectionLevel" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00003">
+		<Name>The contract is not securing the message across the channel</Name>
+		<Description>
+      An attacker may intercept messages and freely rewrite their content or get access to confidential information.
+    </Description>
+		<Url>http://msdn.microsoft.com/practices/</Url>
+		<Resolution>Use a ProtectionLevel different from None for the operation {0} in the contract {0}
+		</Resolution>
+		<Email></Email>
+		<MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+		<FixCategories>NonBreaking</FixCategories>
+		<Owner />
+	</Rule>
+  <Rule TypeName="UnTrustedClientCertificateValidation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00004">
+    <Name>Certificates are not being validated or not trusted in the service credentials.</Name>
+    <Description>
+      Any usage of X.509 certificates for signing or encrypting is unsafe. 
+      An active attacker can generate valid test certificates, then for instance use these certificates to sign any message.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Do not use the value {0} in production: set the attribute certificateValidationMode with a value like {1} in the serviceCertificate/authentication element of the WCF configuration file.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner />
+  </Rule>
+  <Rule TypeName="UnTrustedServiceCertificateValidation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00005">
+    <Name>Certificates are not being validated or not trusted in the client credentials.</Name>
+    <Description>
+      Any usage of X.509 certificates for signing or encrypting is unsafe.
+      An active attacker can generate valid test certificates, then for instance use these certificates to sign any message.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Do not use the value {0} in production: set the attribute certificateValidationMode with a value like {1} in the clientCertificate/authentication element of the WCF configuration file.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner />
+  </Rule>
+  <Rule TypeName="UnTrustedClientCertificateRevocation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00006">
+    <Name>Review certificate revocation checks for the service credentials</Name>
+    <Description>
+      The code does not prescribe checking that X.509 certificates have an issuer chain that extends to a trusted root authority; hence any usage of X.509 certificates for signing or encrypting fully trusts the current content of the local certificate store.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Do not use the value {0} in production.
+      Set the attribute "revocationMode" with a value different from {0} in the service credentials.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner />
+  </Rule>
+  <Rule TypeName="UnTrustedServiceCertificateRevocation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00007">
+    <Name>Review certificate revocation checks for the client credentials</Name>
+    <Description>
+      The code does not prescribe checking that X.509 certificates have an issuer chain that extends to a trusted root authority; hence any usage of X.509 certificates for signing or encrypting fully trusts the current content of the local certificate store.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Do not use the value {0} in production.
+      Set the attribute "revocationMode" with a value different from {0} in the client credentials.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="ExceptionDetailInFaults" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00008">
+    <Name>Detailed errors are enabled.</Name>
+    <Description>
+      An attacker may intentionally trigger errors to gather information on the endpoint implementation, potentially enabling further attacks.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      In production, set the value of the attribute <B>includeExceptionDetailInFaults</B> to false (<B>includeExceptionDetailInFaults="false"</B>) in the <B>&lt;serviceDebug&gt;</B> behavior element named '{0}' of the WCF configuration file.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="CreditTakingAttack" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+        CheckId="WCFS00009">
+    <Name>This configuration would enable a credit-taking attack.</Name>
+    <Description>
+      Messages are encrypted then signed, so an attacker may intercept a message, remove the original signature, and generate a new envelope with the same encrypted body and its own signature. From the receiver's viewpoint, the resulting message is valid, and its body is attributed to the attacker.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Use either <B>messageProtectionOrder="{1}"</B> or <B>messageProtectionOrder="{2}"</B> with the <b>customBinding</b> binding named '{0}'.
+      The other bindings (netMsmqBinding, netTcpBinding, wsDualHttpBinding, wsHttpBinding, wsFederationBinding) always use the value <B>SignBeforeEncrypt</B>
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="ReplayDetection" 
+      Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+      CheckId="WCFS00010">
+    <Name>Replay detection is not enabled in the <b>customBinding</b> binding configuration.</Name>
+    <Description>
+      The same message may be accepted many times, leading to replay attacks.
+      The risk is mitigated if you turn on the <b>detectReplays</b> setting since it is used to prevent replays.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Consider enabling the replay detection cache for the custom binding element name '{0}' by including an element such as
+      <br/>
+      Client Side:
+      <b>&lt;localClientSettings detectReplays ='true'/&gt;</b><br/>
+      Service Side:
+      <b>&lt;localServiceSettings detectReplays ='true'/&gt;</b>
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NoProtection" 
+    Category="Microsoft.Practices.FxCop.Rules.WcfSecurity" 
+    CheckId="WCFS00011">
+    <Name>The binding (like BasicHttpBinding) is not securing the message across the channel without securing the channel at the transport level.</Name>
+    <Description>
+      An attacker may intercept messages and freely rewrite their content or get access to confidential information.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Use a more secure binding for '{0}' like WSHttpBinding or secure the transport with Secure Sockets Layer.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">CriticalWarning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+</Rules>

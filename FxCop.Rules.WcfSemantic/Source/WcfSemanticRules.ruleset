@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Web Service Software Factory WCF Semantic Rules"
+         Description="These rules focus on enforcing best practices for building WCF services."
+         ToolsVersion="11.0">
+  <RuleHintPaths>
+    <Path>Microsoft.Practices.FxCop.Rules.WcfSemantic.dll</Path>
+  </RuleHintPaths>
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="WSSF0001" Action="Warning" />
+    <Rule Id="WSSF0002" Action="Warning" />
+    <Rule Id="WSSF0003" Action="Warning" />
+    <Rule Id="WSSF0004" Action="Warning" />
+    <Rule Id="WSSF0005" Action="Warning" />
+    <Rule Id="WSSF0006" Action="Warning" />
+    <Rule Id="WSSF0007" Action="Warning" />
+    <Rule Id="WSSF0008" Action="Warning" />
+    <Rule Id="WSSF0009" Action="Warning" />
+    <Rule Id="WSSF0010" Action="Warning" />
+    <Rule Id="WSSF0011" Action="Warning" />
+    <Rule Id="WSSF0012" Action="Warning" />   
+    <Rule Id="WSSF0014" Action="Warning" />
+    <Rule Id="WSSF0015" Action="Warning" />
+    <Rule Id="WSSF0016" Action="Warning" />
+    <Rule Id="WSSF0017" Action="Warning" />
+    <Rule Id="WSSF0018" Action="Warning" />
+  </Rules>
+</RuleSet>

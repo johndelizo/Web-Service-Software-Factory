@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EmptySchema" targetNamespace="http://tempuri.org/EmptySchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/EmptySchema.xsd" xmlns:mstns="http://tempuri.org/EmptySchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="SomeElement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Data1" type="xs:string" />
+				<xs:element name="Data2" type="simpleType1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="simpleType1">
+		<xs:restriction base="xs:ENTITY">
+			<xs:T1 value="Foo" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

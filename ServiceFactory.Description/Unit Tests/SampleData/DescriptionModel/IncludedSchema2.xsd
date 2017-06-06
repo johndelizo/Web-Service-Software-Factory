@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IncludedSchema2" 
+					 targetNamespace="http://tempuri.org/test" 
+					 elementFormDefault="qualified" 
+					 xmlns="http://tempuri.org/test" 
+					 xmlns:mstns="http://tempuri.org/test" 
+					 xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="element2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SomeData" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

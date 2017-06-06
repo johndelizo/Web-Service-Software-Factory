@@ -1,0 +1,131 @@
+<#+ 
+	
+	private string GetRequestElement(MessageBase request)
+	{
+		if(request != null)
+		{
+			return ResolveMessageContractNameAndAddProjectRef(request) + " request";
+		}
+		return "";
+	}
+
+	private string GetResponseElement(MessageBase response)
+	{
+		if(response != null)
+		{
+			return ResolveMessageContractNameAndAddProjectRef(response);
+		}
+		return "void";
+	}	
+
+	private string ResolveServiceContractNameAndAddProjectRef(ServiceContract contract)
+	{
+		AsmxServiceContract asmxSc = GetObjectExtender<AsmxServiceContract>(contract);
+		if(asmxSc == null)
+		{
+			return "I" + contract.Name;
+		}
+		AddProjectReference(asmxSc.ArtifactLink);
+		return asmxSc.ArtifactLink.Namespace + ".I" + contract.Name;
+	}
+
+	private string ResolveXsdMessageElementAndAddProjectRef(MessageBase message)
+	{
+		AsmxXsdMessageContract asmxXsdMc = GetObjectExtender<AsmxXsdMessageContract>(message);
+		if (asmxXsdMc == null)
+		{
+			return message.Name;
+		}
+		XmlSchemaElementMoniker uri = new XmlSchemaElementMoniker(((XsdMessage)message).Element);
+		AddProjectReference(asmxXsdMc.AsmxXsdMessageElementArtifactLink);
+		return asmxXsdMc.AsmxXsdMessageElementArtifactLink.Namespace + "." + uri.ElementName;					
+	}
+	
+	private string ResolveMessageContractNameAndAddProjectRef(MessageBase message)
+	{
+		AsmxMessageContract asmxMc = GetObjectExtender<AsmxMessageContract>(message);
+		if (asmxMc == null)
+		{
+			AsmxXsdMessageContract asmxXsdMc = GetObjectExtender<AsmxXsdMessageContract>(message);
+			if( asmxXsdMc == null )
+			{
+				return message.Name;			
+			}
+			if(message is XsdMessage && !((XsdMessage)message).IsWrapped)
+			{
+				return ResolveXsdMessageElementAndAddProjectRef(message);
+			}
+			AddProjectReference(asmxXsdMc.ArtifactLink);
+			return asmxXsdMc.ArtifactLink.Namespace + "." +  message.Name;			
+		}
+		
+		// Add a Data Contract reference if needed
+		foreach(MessagePart mp in message.MessageParts)
+		{
+			if(mp is DataContractMessagePart)
+			{
+				ResolveTypeAndAddProjectReference(((DataContractMessagePart)mp).Type);
+				break;
+			}
+		}
+		
+		AddProjectReference(asmxMc.ArtifactLink);
+		return asmxMc.ArtifactLink.Namespace + "." + message.Name;
+	}
+
+	private string ResolveTypeAndAddProjectReference(ModelBusReference mbr)
+	{
+		DataContractBase dce = (DataContractBase)ResolveModelReference(mbr);
+		Microsoft.Practices.Modeling.CodeGeneration.Artifacts.ArtifactLink alink = GetArtifactLink(dce);
+		AddProjectReference((Microsoft.Practices.Modeling.CodeGeneration.Artifacts.IArtifactLink)alink);
+		return alink.Namespace + "." + dce.Name;
+	}	
+	
+	private void PrintAttributeArguments(IDictionary<string, string> args)
+	{
+		if (args.Count > 0)
+		{
+			Write("(");
+			bool first = true;
+			foreach (KeyValuePair<string, string> arg in args)
+			{
+				if (!first)
+				{
+					Write(", ");
+				}
+				first = false;
+				Write(string.Format("{0} = {1}", arg.Key, arg.Value));
+			}
+			Write(")");
+		}
+	}
+	
+	private IDictionary<string, string> MessageContractAttributeArguments
+	{
+		get
+		{
+			IDictionary<string, string> args = new Dictionary<string, string>();
+			args.Add("Namespace", string.Format("\"{0}\"", CurrentElement.Namespace));
+			args.Add("IsNullable", "false");
+			args.Add("ElementName", string.Format("\"{0}\"",CurrentElement.Name));
+			
+			return args;
+		}
+	}
+
+	private string AddRemarks(object element, string lineFormat)
+	{
+		return AddRemarks(element, lineFormat, false);
+	}
+
+	private string AddRemarks(object element, string lineFormat, bool applyAfter)
+	{
+	    System.Reflection.PropertyInfo info = element.GetType().GetProperty("Remarks");
+		if(info != null && !string.IsNullOrEmpty(info.GetValue(element, null) as String))
+		{
+			string fmt = applyAfter ? "/// <remarks>{1}</remarks>{0}" : "{0}/// <remarks>{1}</remarks>"; 
+			return string.Format(fmt, lineFormat, info.GetValue(element, null));
+		}
+		return string.Empty;
+	}
+#>

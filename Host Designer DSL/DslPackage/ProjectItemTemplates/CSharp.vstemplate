@@ -1,0 +1,15 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{e3821e6e-c0ad-4f8f-b300-de95e9776716}" ID="103"/>
+		<Description Package="{e3821e6e-c0ad-4f8f-b300-de95e9776716}" ID="102"/>
+		<Icon Package="{e3821e6e-c0ad-4f8f-b300-de95e9776716}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>HostDesigner.host</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.host">host.host</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.host.diagram">host.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>

@@ -1,0 +1,295 @@
+﻿<Rules FriendlyName="WSSF WCF Semantic Rules">
+  <Rule TypeName="InconsistentServiceContract" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0001"> 
+    <Name>Inconsistent SessionMode value in service contract</Name>
+    <Description>
+      The service contract is inconsistent because the SessionMode parameter value is not specified in the ServiceContract attribute and some operations have the IsInitiating/IsTerminating parameter declared in the OperationContract attribute or the SessionMode value does not correspond to the IsInitiating/IsTerminating values declared (i.e. SessionMode = Required and not operation has IsInitiating/IsTerminating values set to true).
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Add the SessionMode parameter to the ServiceContract attribute declaration or {0} the IsInitiating/IsTerminating values in operation: {1}.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+		<FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NonEmptyServiceContractName" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0002">
+    <Name>Avoid empty name in a service contract</Name>
+    <Description>
+      The service contract should have some name defined.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Add some value to the Name property of the ServiceContract attribute declaration.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="MultipleUnmatchedMessageHandlers" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0003">
+    <Name>Do not define more then one unmatched message handler (Action '*' property in OperationContract attribute).</Name>
+    <Description>
+      A service contract can have only one service option with the Action property set to "*". 
+      Any group of service contracts that a service class implements (including the implicit service interface of the service class) can have many service operations with the Action property set to "*" when the IsInitiating property is set to false. 
+      However, only one of those service operations can have the Action property set to "*" and the IsInitiating property set to true.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Specify only one unmatched message handler value. Set the Action property of only one operation to the '*' value.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NonEmptyServiceContract" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0004">
+    <Name>Avoid empty or default values in a service contract</Name>
+    <Description>
+      The service contract should have some values defined like name and namespace.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Add some non default property values to the service contract attribute declaration.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="DuplicatedOperations" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0005">
+    <Name>Two or more operations has the same signature name.</Name>
+    <Description>
+      Each operation should have a unique signature name.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Change the name of this operation '{0}' in order to avoid naming collisions.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>Breaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="OperationBehaviorValidUsage" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0006">
+    <Name>OperationBehavior attribute should be used in a service implementation class.</Name>
+    <Description>
+      The 'OperationBehavior' attribute should be used in a service implementation class.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Change the attribute 'OperationBehavior' to a service implementation class.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="ReturnVoidWithOneWayOperation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0007">
+    <Name>One way operations should return void.</Name>
+    <Description>
+      All operations marked with OneWay value should return void.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Update the return type of this operation to void.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>Breaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NoFaultsWithOneWayOperation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0008">
+    <Name>Faults are not allowed on one way operations.</Name>
+    <Description>
+      Avoid defining faults on OneWay operations.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Remove the fault attribute or change the message pattern for this operation.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NoOutputParamsWithOneWayOperation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0009">
+    <Name>Output parameters are not allowed on OneWay operations.</Name>
+    <Description>
+      Avoid defining output parameters on OneWay operations.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Remove the output parameter/s or change the message pattern for this operation.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>Breaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NoReplyActionWithOneWayOperation" 
+        Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+        CheckId="WSSF0010">
+    <Name>ReplyAction value is not allowed on OneWay operations.</Name>
+    <Description>
+      Avoid defining a ReplyAction property on OneWay operations.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Remove the ReplyAction value or change the message pattern for this operation.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="InvalidCallbackContractType" 
+      Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+      CheckId="WSSF0011">
+    <Name>Allowed types for CallbackContracts are interface or MarshalByRef derived class.</Name>
+    <Description>
+      Specify an interface or a MarshalByRef class in the CallbackContract property of the ServiceContract attribute that represents the required opposite contract in a two-way (or duplex) message exchange.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Change the CallbackContract type to an interface or a MarshalByRef class.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>Breaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <!-- This rule will not support 'offending line code navigation'. It's a 'configuration aware' rule-->
+  <Rule TypeName="ContractBindingNotSupportedSession" 
+      Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+      CheckId="WSSF0012">
+    <Name>Do not use a service contract that requires session with a sessionless binding.</Name>
+    <Description>
+      The service contract requires session, but the specified binding doesn't support it or isn't configured properly to support it.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      The service contract '{0}' requires session, but binding '{1}' doesn't support it or isn't configured properly to support it. Use a binding that supports sessions or update the service contract '{0}' SessionMode value with a compatible mode.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <!-- This rule will not support 'offending line code navigation'. It's a 'configuration aware' rule-->
+  <!--<Rule TypeName="ContractBindingMismatch" 
+      Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+      CheckId="WSSF0013">
+    <Name>Check for mismatches between configured bindings and service contract.</Name>
+    <Description>
+      The service contract has requirements that are not supported by the specified binding in the configuration file.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      The service contract '{0}' {1}. Change the current binding '{2}' specified in the configuration file or update the service contract definition to support that binding contract accordingly.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>-->
+  <Rule TypeName="MixingMessageContractAttributes" 
+      Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+      CheckId="WSSF0014">
+    <Name>Avoid mixing message contracts with other parameter types.</Name>
+    <Description>
+      Message contracts cannot be used at the same time as other parameter types in an operation.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      The operation '{0}' has a parameter or return type of type System.ServiceModel.Channels.Message or a type that has MessageContractAttribute and other parameters of different types. 
+      When using System.ServiceModel.Channels.Message or types with MessageContractAttribute, the method must not use any other types of parameters.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>Breaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="NonEmptyCallbackContractType" 
+    Category="Microsoft.Practices.FxCop.Rules.WcfSemantic" 
+    CheckId="WSSF0015">
+    <Name>A callback contract should have operations defined with OperationContractAttribute.</Name>
+    <Description>
+      A callback contract should have operations defined with OperationContractAttribute.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Add the OperationContractAttribute to the method '{0}' in the callback contract '{1}'.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+	<Rule TypeName="NoAsyncWithOneWayOperation"
+	Category="Microsoft.Practices.FxCop.Rules.WcfSemantic"
+	CheckId="WSSF0016">
+		<Name>AsyncPattern value set to true is not allowed on one way operations.</Name>
+		<Description>
+			Avoid setting AsyncPattern argument as true on OneWay operations.
+		</Description>
+		<Url>http://msdn.microsoft.com/practices/</Url>
+		<Resolution>
+			Set AsyncPattern to false or change the message pattern for this operation: {0}.
+		</Resolution>
+		<Email></Email>
+		<MessageLevel Certainty="100">Warning</MessageLevel>
+		<FixCategories>NonBreaking</FixCategories>
+		<Owner/>
+	</Rule>
+  <Rule TypeName="MissingOperationContractAttribute"
+  Category="Microsoft.Practices.FxCop.Rules.WcfSemantic"
+  CheckId="WSSF0017">
+    <Name>Missing OperationContractAttribute.</Name>
+    <Description>
+      An OperationContractAttribute is missing in a member of this Service Contract type.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      Add an OperationContractAttribute to this operation '{0}'.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+  <Rule TypeName="DuplicateEndpointAddress"
+  Category="Microsoft.Practices.FxCop.Rules.WcfSemantic"
+  CheckId="WSSF0018">
+    <Name>Duplicate Endpoint Address.</Name>
+    <Description>
+      Endpoints should have unique address values.
+    </Description>
+    <Url>http://msdn.microsoft.com/practices/</Url>
+    <Resolution>
+      A duplicate endpoint address was found with value '{0}'. Set unique address values to each endpoint.
+    </Resolution>
+    <Email></Email>
+    <MessageLevel Certainty="100">Warning</MessageLevel>
+    <FixCategories>NonBreaking</FixCategories>
+    <Owner/>
+  </Rule>
+</Rules>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="19bb3318-cdf8-44bc-b02b-5788104f8cf8" Version="4.0.0.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>Web Service Software Factory 2010</DisplayName>
+    <Description>The Web Service Software Factory 2010 is an integrated collection of resources designed to help you quickly and consistently build Web services that adhere to well-known architecture and design patterns.</Description>
+    <License>Resources\EULA.rtf</License>
+    <GettingStartedGuide>http://www.codeplex.com/servicefactory</GettingStartedGuide>
+    <Icon>Resources\wssf.ico</Icon>
+    <PreviewImage>Resources\wssf preview.png</PreviewImage>
+  </Metadata>
+  <Installation InstalledByMsi="false">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5"/>
+    <Dependency Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" d:Source="Installed" Version="11.0" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="DataContractDsl" Path="|DataContractDsl|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="DataContractDsl.ModelBusAdapters" Path="|DataContractDsl.ModelBusAdapters|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="DataContractDslPackage" Path="|DataContractDslPackage|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="DataContractDslPackage" Path="|DataContractDslPackage;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="ServiceContractDsl" Path="|ServiceContractDsl|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="ServiceContractDsl.ModelBusAdapters" Path="|ServiceContractDsl.ModelBusAdapters|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="ServiceContractDslPackage" Path="|ServiceContractDslPackage|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="ServiceContractDslPackage" Path="|ServiceContractDslPackage;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="HostDesignerDsl" Path="|HostDesignerDsl|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="HostDesignerDslPackage" Path="|HostDesignerDslPackage|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="HostDesignerDslPackage" Path="|HostDesignerDslPackage;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Service Factory Project Templates" d:TargetPath="|Service Factory Project Templates;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+  </Assets>
+</PackageManifest>

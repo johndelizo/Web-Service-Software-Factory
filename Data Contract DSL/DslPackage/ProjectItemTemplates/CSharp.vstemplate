@@ -1,0 +1,16 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{1a168a56-ee16-4520-a071-3431a82d3e1f}" ID="103"/>
+		<Description Package="{1a168a56-ee16-4520-a071-3431a82d3e1f}" ID="102"/>
+		<Icon Package="{1a168a56-ee16-4520-a071-3431a82d3e1f}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>DataContractDsl.datacontract</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.datacontract">datacontract.datacontract</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.datacontract.diagram">datacontract.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

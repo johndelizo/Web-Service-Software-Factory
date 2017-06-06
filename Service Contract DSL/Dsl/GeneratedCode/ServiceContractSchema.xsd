@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="ServiceContractDslSchema" targetNamespace="http://schemas.microsoft.com/dsltools/ServiceContractDsl" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/ServiceContractDsl" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- ServiceContractModel -->
+  <xsd:element name="serviceContractModel" type="ServiceContractModel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContractModel">
+    <xsd:annotation>
+      <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ServiceContractModelHasServiceContracts -->
+          <xsd:element name="serviceContracts" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ServiceContractModelHasServiceContracts</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="serviceContractModelHasServiceContracts">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceContractModelHasServiceContracts needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="serviceContract" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ServiceContractModelHasOperations -->
+          <xsd:element name="operations" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ServiceContractModelHasOperations</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="serviceContractModelHasOperations">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceContractModelHasOperations needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="operation" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ServiceContractModelHasServices -->
+          <xsd:element name="services" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ServiceContractModelHasServices</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="serviceContractModelHasServices">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceContractModelHasServices needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="service" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ServiceContractModelHasMessages -->
+          <xsd:element name="messages" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ServiceContractModelHasMessages</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="serviceContractModelHasMessages">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceContractModelHasMessages needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="messageBase" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ImplementationTechnology -->
+        <xsd:attribute name="implementationTechnology" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>This associates a platform technology with each of the shapes on the design surface. As a result, each shape may acquire additional properties specific for the chosen technology.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ProjectMappingTable -->
+        <xsd:attribute name="projectMappingTable" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Allows you to select the project mapping you would like to generate artifacts to. The drop-down lists the named entries in the ProjectMapping.xml file. Creating an implementation project structure will add a new entry to the project mapping table. The Project Mapping Table entry associates shapes on the design surface with the projects that will contain the code for those shapes.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>This value represents the default XML namespace that will be applied to each shape added to the design surface.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SerializerType -->
+        <xsd:attribute name="serializerType" type="SerializerType" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModel Moniker -->
+  <xsd:element name="serviceContractModelMoniker" type="ServiceContractModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContractModel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContract -->
+  <xsd:element name="serviceContract" type="ServiceContract" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContract">
+    <xsd:annotation>
+      <xsd:documentation>Elements embedded in the model. Appear as boxes on the diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ServiceContractReferencesOperations -->
+          <xsd:element name="operations" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ServiceContractReferencesOperations</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="serviceContractReferencesOperations">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceContractReferencesOperations needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="operationMoniker" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the service contract.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The XML namespace of the service contract.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContract Moniker -->
+  <xsd:element name="serviceContractMoniker" type="ServiceContractMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContract instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Operation -->
+  <xsd:element name="operation" type="Operation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Operation">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: OperationHasFaults -->
+          <xsd:element name="faults" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of OperationHasFaults</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="operationHasFaults">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from OperationHasFaults needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="fault" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: OperationReferencesResponse -->
+          <xsd:element name="response" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of OperationReferencesResponse</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="1" >
+                  <xsd:element ref="operationReferencesResponse">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from OperationReferencesResponse needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="messageBaseMoniker" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the operation.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Action -->
+        <xsd:attribute name="action" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Represents the WS-Addressing action attribute, which is used for dispatching the request.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsOneWay -->
+        <xsd:attribute name="isOneWay" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether or not an operation returns a reply or fault message.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Operation Moniker -->
+  <xsd:element name="operationMoniker" type="OperationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="OperationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Operation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Service -->
+  <xsd:element name="service" type="Service" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Service">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ServiceReferencesServiceContract -->
+          <xsd:element name="serviceContract" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of ServiceReferencesServiceContract</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="1" maxOccurs="1" >
+                  <xsd:element ref="serviceReferencesServiceContract">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ServiceReferencesServiceContract needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="serviceContractMoniker" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the service.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The XML namespace of the service.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Service Moniker -->
+  <xsd:element name="serviceMoniker" type="ServiceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Service instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Message -->
+  <xsd:element name="message" type="Message" substitutionGroup="messageBase" />
+  <xsd:complexType name="Message">
+    <xsd:complexContent>
+      <xsd:extension base="MessageBase">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Message Moniker -->
+  <xsd:element name="messageMoniker" type="MessageMoniker" substitutionGroup="messageBaseMoniker" />
+  <xsd:complexType name="MessageMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Message instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="MessageBaseMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MessagePart -->
+  <xsd:element name="messagePart" abstract="true" type="MessagePart" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MessagePart" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the data contract.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MessagePart Moniker -->
+  <xsd:element name="messagePartMoniker" abstract="true" type="MessagePartMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MessagePartMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MessagePart instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Fault -->
+  <xsd:element name="fault" abstract="true" type="Fault" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Fault" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of the fault contract.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Fault Moniker -->
+  <xsd:element name="faultMoniker" abstract="true" type="FaultMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FaultMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Fault instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractMessagePart -->
+  <xsd:element name="dataContractMessagePart" type="DataContractMessagePart" substitutionGroup="messagePart" />
+  <xsd:complexType name="DataContractMessagePart">
+    <xsd:complexContent>
+      <xsd:extension base="MessagePart">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Type -->
+        <xsd:attribute name="type" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A cross-model reference to the associated data contract type on the data contract model.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractMessagePart Moniker -->
+  <xsd:element name="dataContractMessagePartMoniker" type="DataContractMessagePartMoniker" substitutionGroup="messagePartMoniker" />
+  <xsd:complexType name="DataContractMessagePartMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractMessagePart instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="MessagePartMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PrimitiveMessagePart -->
+  <xsd:element name="primitiveMessagePart" type="PrimitiveMessagePart" substitutionGroup="messagePart" />
+  <xsd:complexType name="PrimitiveMessagePart">
+    <xsd:complexContent>
+      <xsd:extension base="MessagePart">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Type -->
+        <xsd:attribute name="type" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A primitive .NET type.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsNullable -->
+        <xsd:attribute name="isNullable" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether or not this part can have a null value.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsCollection -->
+        <xsd:attribute name="isCollection" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates whether or not this part is a generic list collection. </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- PrimitiveMessagePart Moniker -->
+  <xsd:element name="primitiveMessagePartMoniker" type="PrimitiveMessagePartMoniker" substitutionGroup="messagePartMoniker" />
+  <xsd:complexType name="PrimitiveMessagePartMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for PrimitiveMessagePart instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="MessagePartMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MessageBase -->
+  <xsd:element name="messageBase" abstract="true" type="MessageBase" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MessageBase" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: RequestReferencedByOperation -->
+          <xsd:element name="requestFor" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of RequestReferencedByOperation</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="requestReferencedByOperation">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from RequestReferencedByOperation needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="operationMoniker" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: MessageHasMessageParts -->
+          <xsd:element name="messageParts" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of MessageHasMessageParts</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="messageHasMessageParts">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from MessageHasMessageParts needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="messagePart" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The name of this message.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Namespace -->
+        <xsd:attribute name="namespace" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>The XML namespace of this message.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: ObjectExtenderContainer -->
+        <xsd:attribute name="objectExtenderContainer" type="xsd:string" />
+        <!-- Property: Remarks -->
+        <xsd:attribute name="remarks" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Provides additional documentation information to this element. Its content will be added as a &lt;remarks&gt; element to the generated code.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MessageBase Moniker -->
+  <xsd:element name="messageBaseMoniker" abstract="true" type="MessageBaseMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MessageBaseMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MessageBase instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- XsdMessage -->
+  <xsd:element name="xsdMessage" type="XsdMessage" substitutionGroup="messageBase" />
+  <xsd:complexType name="XsdMessage">
+    <xsd:complexContent>
+      <xsd:extension base="MessageBase">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Element -->
+        <xsd:attribute name="element" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A reference to a complexType or element in an XSD file that represents this message.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: IsWrapped -->
+        <xsd:attribute name="isWrapped" type="xsd:boolean" >
+          <xsd:annotation>
+            <xsd:documentation>Indicates if the message contains a wrapper element.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- XsdMessage Moniker -->
+  <xsd:element name="xsdMessageMoniker" type="XsdMessageMoniker" substitutionGroup="messageBaseMoniker" />
+  <xsd:complexType name="XsdMessageMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for XsdMessage instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="MessageBaseMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractFault -->
+  <xsd:element name="dataContractFault" type="DataContractFault" substitutionGroup="fault" />
+  <xsd:complexType name="DataContractFault">
+    <xsd:complexContent>
+      <xsd:extension base="Fault">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Type -->
+        <xsd:attribute name="type" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A cross-model reference to the associated data contract type on the data contract model.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DataContractFault Moniker -->
+  <xsd:element name="dataContractFaultMoniker" type="DataContractFaultMoniker" substitutionGroup="faultMoniker" />
+  <xsd:complexType name="DataContractFaultMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DataContractFault instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FaultMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- XsdElementFault -->
+  <xsd:element name="xsdElementFault" type="XsdElementFault" substitutionGroup="fault" />
+  <xsd:complexType name="XsdElementFault">
+    <xsd:complexContent>
+      <xsd:extension base="Fault">
+        <!-- Property: Element -->
+        <xsd:attribute name="element" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>A reference to a complexType or element in an XSD file that represents this fault.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- XsdElementFault Moniker -->
+  <xsd:element name="xsdElementFaultMoniker" abstract="true" type="XsdElementFaultMoniker" substitutionGroup="faultMoniker" />
+  <xsd:complexType name="XsdElementFaultMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for XsdElementFault instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="FaultMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasServiceContracts -->
+  <xsd:element name="serviceContractModelHasServiceContracts" abstract="true" type="ServiceContractModelHasServiceContracts" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContractModelHasServiceContracts" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Embedding relationship between the Model and Elements</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ServiceContract -->
+          <xsd:element ref="serviceContract" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasServiceContracts Moniker -->
+  <xsd:element name="serviceContractModelHasServiceContractsMoniker" abstract="true" type="ServiceContractModelHasServiceContractsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractModelHasServiceContractsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContractModelHasServiceContracts instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasOperations -->
+  <xsd:element name="serviceContractModelHasOperations" abstract="true" type="ServiceContractModelHasOperations" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContractModelHasOperations" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Operation -->
+          <xsd:element ref="operation" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasOperations Moniker -->
+  <xsd:element name="serviceContractModelHasOperationsMoniker" abstract="true" type="ServiceContractModelHasOperationsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractModelHasOperationsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContractModelHasOperations instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractReferencesOperations -->
+  <xsd:element name="serviceContractReferencesOperations" abstract="true" type="ServiceContractReferencesOperations" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContractReferencesOperations" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Operation -->
+          <xsd:element ref="operationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractReferencesOperations Moniker -->
+  <xsd:element name="serviceContractReferencesOperationsMoniker" abstract="true" type="ServiceContractReferencesOperationsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractReferencesOperationsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContractReferencesOperations instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasServices -->
+  <xsd:element name="serviceContractModelHasServices" abstract="true" type="ServiceContractModelHasServices" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContractModelHasServices" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Service -->
+          <xsd:element ref="service" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasServices Moniker -->
+  <xsd:element name="serviceContractModelHasServicesMoniker" abstract="true" type="ServiceContractModelHasServicesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractModelHasServicesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContractModelHasServices instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceReferencesServiceContract -->
+  <xsd:element name="serviceReferencesServiceContract" abstract="true" type="ServiceReferencesServiceContract" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceReferencesServiceContract" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Description for Microsoft.Practices.ServiceFactory.ServiceContracts</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ServiceContract -->
+          <xsd:element ref="serviceContractMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceReferencesServiceContract Moniker -->
+  <xsd:element name="serviceReferencesServiceContractMoniker" abstract="true" type="ServiceReferencesServiceContractMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceReferencesServiceContractMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceReferencesServiceContract instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperationHasFaults -->
+  <xsd:element name="operationHasFaults" abstract="true" type="OperationHasFaults" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="OperationHasFaults" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Fault -->
+          <xsd:element ref="fault" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperationHasFaults Moniker -->
+  <xsd:element name="operationHasFaultsMoniker" abstract="true" type="OperationHasFaultsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="OperationHasFaultsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for OperationHasFaults instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasMessages -->
+  <xsd:element name="serviceContractModelHasMessages" abstract="true" type="ServiceContractModelHasMessages" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceContractModelHasMessages" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end MessageBase -->
+          <xsd:element ref="messageBase" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ServiceContractModelHasMessages Moniker -->
+  <xsd:element name="serviceContractModelHasMessagesMoniker" abstract="true" type="ServiceContractModelHasMessagesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceContractModelHasMessagesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ServiceContractModelHasMessages instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- RequestReferencedByOperation -->
+  <xsd:element name="requestReferencedByOperation" abstract="true" type="RequestReferencedByOperation" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="RequestReferencedByOperation" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Operation -->
+          <xsd:element ref="operationMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- RequestReferencedByOperation Moniker -->
+  <xsd:element name="requestReferencedByOperationMoniker" abstract="true" type="RequestReferencedByOperationMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="RequestReferencedByOperationMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for RequestReferencedByOperation instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperationReferencesResponse -->
+  <xsd:element name="operationReferencesResponse" abstract="true" type="OperationReferencesResponse" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="OperationReferencesResponse" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end MessageBase -->
+          <xsd:element ref="messageBaseMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperationReferencesResponse Moniker -->
+  <xsd:element name="operationReferencesResponseMoniker" abstract="true" type="OperationReferencesResponseMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="OperationReferencesResponseMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for OperationReferencesResponse instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MessageHasMessageParts -->
+  <xsd:element name="messageHasMessageParts" abstract="true" type="MessageHasMessageParts" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MessageHasMessageParts" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end MessagePart -->
+          <xsd:element ref="messagePart" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MessageHasMessageParts Moniker -->
+  <xsd:element name="messageHasMessagePartsMoniker" abstract="true" type="MessageHasMessagePartsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MessageHasMessagePartsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MessageHasMessageParts instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enum BindingStyle -->
+  <xsd:simpleType name="BindingStyle">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="RPC"/>
+      <xsd:enumeration value="Document"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ServiceEncoding -->
+  <xsd:simpleType name="ServiceEncoding">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Literal"/>
+      <xsd:enumeration value="Encoding"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum MessageType -->
+  <xsd:simpleType name="MessageType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="RequestMessage"/>
+      <xsd:enumeration value="ResponseMessage"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum SerializerType -->
+  <xsd:simpleType name="SerializerType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="XmlSerializer"/>
+      <xsd:enumeration value="DataContractSerializer"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>
+

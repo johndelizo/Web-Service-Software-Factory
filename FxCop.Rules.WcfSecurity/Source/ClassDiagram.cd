@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.CertificateRevocationMode" Collapsed="true">
+    <Position X="5.25" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>CertificateRevocationMode.cs</FileName>
+      <HashCode>AAAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.CertificateValidationMode" Collapsed="true">
+    <Position X="8.5" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>CertificateValidationMode.cs</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.ConfigurationIntrospectionRule" Collapsed="true">
+    <Position X="9.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>ConfigurationIntrospectionRule.cs</FileName>
+      <HashCode>AIAAAAgAAAAAAAAAAAAAAgAAAAIAAAIAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.CreditTakingAttack" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CreditTakingAttack.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.ExceptionDetailInFaults" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ExceptionDetailInFaults.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.NoProtection" Collapsed="true">
+    <Position X="8" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>NoProtection.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAQAAAAAAAEABAAAAEAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.ReplayDetection" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ReplayDetection.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.ReviewProtectionLevel" Collapsed="true">
+    <Position X="13.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>ReviewProtectionLevel.cs</FileName>
+      <HashCode>AYAAAAgAACAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.SecurityControlFlowRule" Collapsed="true">
+    <Position X="7" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>SecurityControlFlowRule.cs</FileName>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.SecurityInstrospectionRule" Collapsed="true">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>SecurityInstrospectionRule.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.SecurityRulesUtilities" Collapsed="true">
+    <Position X="14.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SecurityRulesUtilities.cs</FileName>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.ServiceModelConfigurationManager" Collapsed="true">
+    <Position X="12.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ServiceModelConfigurationManager.cs</FileName>
+      <HashCode>ACAAAAAAAAAAAIAADIQAAAAAAACAAABAgAAAAAggAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.ServiceModelConfigurationRule" Collapsed="true">
+    <Position X="9.75" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>ServiceModelConfigurationRule.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.UnTrustedClientCertificateRevocation" Collapsed="true">
+    <Position X="12.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>UnTrustedClientCertificateRevocation.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.UnTrustedClientCertificateValidation" Collapsed="true">
+    <Position X="14.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>UnTrustedClientCertificateValidation.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.UnTrustedServiceCertificateRevocation" Collapsed="true">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>UnTrustedServiceCertificateRevocation.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.UnTrustedServiceCertificateValidation" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>UnTrustedServiceCertificateValidation.cs</FileName>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.Utilities" Collapsed="true">
+    <Position X="14.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Utilities.cs</FileName>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.Practices.FxCop.Rules.WcfSecurity.Properties.Resources" Collapsed="true">
+    <Position X="12.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>
