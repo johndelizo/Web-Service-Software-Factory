@@ -23,7 +23,7 @@ namespace Microsoft.Practices.ServiceFactory.DataContracts
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\14.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(DataContractDslExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(DataContractDslExplorerToolWindow), Constants.DataContractDslEditorFactoryId)]
@@ -34,42 +34,48 @@ namespace Microsoft.Practices.ServiceFactory.DataContracts
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"DataContractTool", 
 					"@DataContractToolToolboxBitmap;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.DataContracts.Data Contract ToolsToolboxTab",
 					"@DataContractEnumToolToolboxItem;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.DataContracts.DataContractEnumToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"DataContractEnumTool", 
 					"@DataContractEnumToolToolboxBitmap;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.DataContracts.Data Contract ToolsToolboxTab",
 					"@PrimitiveDataTypeCollectionToolToolboxItem;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.DataContracts.PrimitiveDataTypeCollectionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"PrimitiveDataTypeCollectionTool", 
 					"@PrimitiveDataTypeCollectionToolToolboxBitmap;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.DataContracts.Data Contract ToolsToolboxTab",
 					"@DataContractCollectionToolToolboxItem;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.DataContracts.DataContractCollectionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"DataContractCollectionTool", 
 					"@DataContractCollectionToolToolboxBitmap;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.DataContracts.Data Contract ToolsToolboxTab",
 					"@FaultContractToolToolboxItem;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.DataContracts.FaultContractToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"FaultContractTool", 
 					"@FaultContractToolToolboxBitmap;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.DataContracts.Data Contract ToolsToolboxTab",
 					"@AggregationConnectionToolToolboxItem;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.DataContracts.AggregationConnectionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Aggregation", 
 					"@AggregationConnectionToolToolboxBitmap;Microsoft.Practices.ServiceFactory.DataContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 5)]
 	[VSShell::ProvideEditorFactory(typeof(DataContractDslEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(DataContractDslEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(DataContractDslEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

@@ -23,7 +23,7 @@ namespace Microsoft.Practices.ServiceFactory.HostDesigner
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\14.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(HostDesignerExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(HostDesignerExplorerToolWindow), Constants.HostDesignerEditorFactoryId)]
@@ -34,42 +34,48 @@ namespace Microsoft.Practices.ServiceFactory.HostDesigner
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"HostApplication", 
 					"@HostApplicationToolboxBitmap;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.HostDesigner.Host ToolsToolboxTab",
 					"@ServiceToolboxItem;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.HostDesigner.ServiceToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Service", 
 					"@ServiceToolboxBitmap;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.HostDesigner.Host ToolsToolboxTab",
 					"@EndpointToolboxItem;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.HostDesigner.EndpointToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Endpoint", 
 					"@EndpointToolboxBitmap;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.HostDesigner.Host ToolsToolboxTab",
 					"@ClientApplicationToolboxItem;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.HostDesigner.ClientApplicationToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ClientApplication", 
 					"@ClientApplicationToolboxBitmap;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.HostDesigner.Host ToolsToolboxTab",
 					"@ProxyToolboxItem;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.HostDesigner.ProxyToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Proxy", 
 					"@ProxyToolboxBitmap;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.HostDesigner.Host ToolsToolboxTab",
 					"@ProxyEndpointConnectionToolToolboxItem;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.HostDesigner.ProxyEndpointConnectionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProxyEndpointConnectionTool", 
 					"@ProxyEndpointConnectionToolToolboxBitmap;Microsoft.Practices.ServiceFactory.HostDesigner.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 5)]
 	[VSShell::ProvideEditorFactory(typeof(HostDesignerEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(HostDesignerEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(HostDesignerEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

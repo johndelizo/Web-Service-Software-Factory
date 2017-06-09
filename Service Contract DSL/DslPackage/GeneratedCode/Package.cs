@@ -23,7 +23,7 @@ namespace Microsoft.Practices.ServiceFactory.ServiceContracts
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\14.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(ServiceContractDslExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(ServiceContractDslExplorerToolWindow), Constants.ServiceContractDslEditorFactoryId)]
@@ -34,42 +34,48 @@ namespace Microsoft.Practices.ServiceFactory.ServiceContracts
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Service", 
 					"@ServiceToolboxBitmap;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.ServiceContracts.Service Contract ToolsToolboxTab",
 					"@ServiceContractToolboxItem;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.ServiceContracts.ServiceContractToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ServiceContract", 
 					"@ServiceContractToolboxBitmap;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.ServiceContracts.Service Contract ToolsToolboxTab",
 					"@OperationToolboxItem;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.ServiceContracts.OperationToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Operation", 
 					"@OperationToolboxBitmap;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.ServiceContracts.Service Contract ToolsToolboxTab",
 					"@MessageToolboxItem;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.ServiceContracts.MessageToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Message", 
 					"@MessageToolboxBitmap;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.ServiceContracts.Service Contract ToolsToolboxTab",
 					"@XsdMessageToolboxItem;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.ServiceContracts.XsdMessageToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"XsdMessage", 
 					"@XsdMessageToolboxBitmap;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.Practices.ServiceFactory.ServiceContracts.Service Contract ToolsToolboxTab",
 					"@ConnectToolToolboxItem;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
 					"Microsoft.Practices.ServiceFactory.ServiceContracts.ConnectToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ConnectTool", 
 					"@ConnectToolToolboxBitmap;Microsoft.Practices.ServiceFactory.ServiceContracts.Dsl.dll", 
-					0xff00ff)]
+					0xff00ff,
+					Index = 5)]
 	[VSShell::ProvideEditorFactory(typeof(ServiceContractDslEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(ServiceContractDslEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(ServiceContractDslEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

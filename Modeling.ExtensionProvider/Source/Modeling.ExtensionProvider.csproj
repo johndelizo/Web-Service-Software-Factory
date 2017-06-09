@@ -55,8 +55,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.14.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.14.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.11.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.9.0">
       <Private>False</Private>

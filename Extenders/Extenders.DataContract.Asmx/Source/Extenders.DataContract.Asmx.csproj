@@ -62,8 +62,8 @@
     <Reference Include="Microsoft.Practices.ComponentModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\Lib\Microsoft.Practices.ComponentModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.14.0" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.14.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
