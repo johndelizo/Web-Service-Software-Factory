@@ -59,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Patterns.ico" />
+    <VSTemplate Include="WSSF.vstemplate" />
     <None Include="ASMXBusinessEntity\Properties\AssemblyInfo.cs" />
     <None Include="ASMXBusinessLogic\Properties\AssemblyInfo.cs" />
     <None Include="ASMXClient\MainForm.cs">
@@ -79,11 +81,26 @@
     <None Include="ASMXDataType\Properties\AssemblyInfo.cs" />
     <None Include="ASMXServiceContract\Properties\AssemblyInfo.cs" />
     <None Include="ASMXServiceImplementation\Properties\AssemblyInfo.cs" />
+    <None Include="Model\DataContractDsl.datacontract" />
+    <None Include="Model\DataContractDsl.datacontract.diagram">
+      <DependentUpon>DataContractDsl.datacontract</DependentUpon>
+    </None>
+    <None Include="Model\HostDesigner.host" />
+    <None Include="Model\HostDesigner.host.diagram">
+      <DependentUpon>HostDesigner.host</DependentUpon>
+    </None>
+    <None Include="Model\ServiceContractDsl.servicecontract" />
+    <None Include="Model\ServiceContractDsl.servicecontract.diagram">
+      <DependentUpon>ServiceContractDsl.servicecontract</DependentUpon>
+    </None>
     <None Include="WCFBusinessEntity\Properties\AssemblyInfo.cs" />
     <None Include="WCFBusinessLogic\Properties\AssemblyInfo.cs" />
     <None Include="WCFClient\MainForm.cs">
       <SubType>Form</SubType>
     </None>
+    <None Include="Model\Model.csproj" />
+    <VSTemplate Include="Model\Model.vstemplate" />
+    <None Include="Model\__TemplateIcon.ico" />
     <Content Include="WCFClient\MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Content>
@@ -101,6 +118,7 @@
     <None Include="WCFMessageContract\Properties\AssemblyInfo.cs" />
     <None Include="WCFServiceContract\Properties\AssemblyInfo.cs" />
     <None Include="WCFServiceImplementation\Properties\AssemblyInfo.cs" />
+    <None Include="Model\Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="ASMXBusinessLogic\BusinessLogic.csproj" />
     <VSTemplate Include="ASMXBusinessLogic\BusinessLogic.vstemplate" />

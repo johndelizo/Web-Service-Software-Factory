@@ -6,7 +6,7 @@
     <Name>WSSF WCF Implementation Projects</Name>
     <Description>Service Factory WCF Implementation Projects</Description>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>90</SortOrder>
+    <SortOrder>3</SortOrder>
     <Icon>WCF.ico</Icon>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>WCFService</DefaultName>

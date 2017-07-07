@@ -6,7 +6,7 @@
     <Name>WSSF ASMX Implementation Projects</Name>
     <Description>Service Factory ASMX Implementation Projects</Description>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>90</SortOrder>
+    <SortOrder>4</SortOrder>
     <Icon>ASMX.ico</Icon>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>ASMXService</DefaultName>
